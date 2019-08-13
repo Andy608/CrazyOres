@@ -2,6 +2,9 @@
 
 run/
 .gradle/
+gradle/
+gradlew
+gradlew.bat
 build/
 gradle-app.setting
 
@@ -40,3 +43,10 @@ local.properties
 
 # PDT-specific
 .buildpath
+build\.gradle
+
+changelog\.txt
+
+CREDITS\.txt
+
+gradle\.properties
