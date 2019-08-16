@@ -1,0 +1,388 @@
+# CRAZYORES CORE ENGLISH LANGUAGE LOCALIZATION FILE (Last update - V2.0.4)
+
+# BLOCK LOCALIZATION
+meteorite_ore.name=Meteorite Ore
+copper_ore.name=Copper Ore
+sapphire_ore.name=Sapphire Ore
+adamite_ore.name=Adamite Ore
+ruby_ore.name=Ruby Ore
+fools_ruby_ore.name=Fool's Ruby Ore
+zectium_ore.name=Zectium Ore
+osmonium_ore.name=Osmonium Ore
+starconium_ore.name=Starconium Ore
+experium_ore.name=Experium Ore
+
+demonite_ore.name=Demonite Ore
+invisium_ore.name=Invisium Ore
+darkstone_ore.name=Darkstone Ore
+luminite_ore.name=Luminite Ore
+ender_ore.name=Ender Ore
+
+meteorite_block.name=Meteorite Block
+copper_block.name=Copper Block
+sapphire_block.name=Sapphire Block
+adamite_block.name=Adamite Block
+ruby_block.name=Ruby Block
+fools_ruby_block.name=Fool's Ruby Block
+zectium_block.name=Zectium Block
+tapazite_block.name=Tapazite Block
+osmonium_block.name=Osmonium Block
+starconium_block.name=Starconium Block
+experium_block.name=Experium Block
+demonite_block.name=Demonite Block
+invisium_block.name=Invisium Block
+darkstone_block.name=Darkstone Block
+ender_block.name=Ender Block
+
+copper_head.name=Copper Head
+sapphire_head.name=Sapphire Head
+adamite_head.name=Adamite Head
+ruby_head.name=Ruby Head
+fools_ruby_head.name=Fool's Ruby Head
+zectium_head.name=Zectium Head
+tapazite_head.name=Tapazite Head
+osmonium_head.name=Osmonium Head
+starconium_head.name=Starconium Head
+demonite_head.name=Demonite Head
+ender_head.name=Ender Head
+
+demonite_furnace.name=Demonite Furnace
+demonite_furnace_lit.name=Demonite Furnace
+
+chocolate_cake.name=Chocolate Cake
+strawberry_cake.name=Strawberry Cake
+birthday_cake.name=Birthday Cake
+
+zectium_protector_spawner.name=Zectium Protector Spawner
+great_white_shark_spawner.name=Great White Shark Spawner
+adamite_shark_spawner.name=Torpedo Shark Spawner
+
+reinforced_glass.name=Reinforced Glass
+smooth_reinforced_glass.name=Smooth Reinforced Glass
+
+reinforced_brick.name=Reinforced Brick
+reinforced_brick_stairs.name=Reinforced Brick Stairs
+
+darkstone_brick.name=Darkstone Brick
+diagonal_darkstone_brick.name=Diagonal Darkstone Brick
+darkstone_brick_stairs.name=Darkstone Brick Stairs
+diagonal_darkstone_brick_stairs.name=Diagonal Darkstone Brick Stairs
+
+diagonal_reinforced_brick.name=Diagonal Reinforced Brick
+diagonal_reinforced_brick_stairs.name=Diagonal Reinforced Brick Stairs
+
+diagonal_brick.name=Diagonal Brick
+diagonal_brick_stairs.name=Diagonal Brick Stairs
+
+lightened_brick.name=Lightened Brick
+lightened_brick_stairs.name=Lightened Brick Stairs
+
+diagonal_lightened_brick.name=Lightened Diagonal Brick
+diagonal_lightened_brick_stairs.name=Lightened Diagonal Brick Stairs
+
+adamite_brick.name=Adamite Brick
+adamite_brick_stairs.name=Adamite Brick Stairs
+
+diagonal_adamite_brick.name=Diagonal Adamite Brick
+diagonal_adamite_brick_stairs.name=Diagonal Adamite Brick Stairs
+
+luminite_block_white.name=White Luminite Block
+luminite_block_red.name=Red Luminite Block
+luminite_block_orange.name=Orange Luminite Block
+luminite_block_yellow.name=Yellow Luminite Block
+luminite_block_green.name=Green Luminite Block
+luminite_block_cyan.name=Cyan Luminite Block
+luminite_block_blue.name=Blue Luminite Block
+luminite_block_purple.name=Purple Luminite Block
+luminite_block_pink.name=Pink Luminite Block
+luminite_block_black.name=Black Luminite Block
+
+luminite_disco.name=Luminite Disco Block
+
+reinforced_chest.name=Reinforced Chest
+
+# GUI LOCALIZATION
+container.demonite_furnace=Demonite Furnace
+container.reinforced_chest=Reinforced Chest
+container.reinforcedChestDouble=Reinforced Chest
+
+# ITEM LOCALIZATION
+tapazite_stalagmite_0.name=Tapazite Stalagmite Phase 1
+tapazite_stalagmite_1.name=Tapazite Stalagmite Phase 2
+tapazite_stalagmite_2.name=Tapazite Stalagmite Phase 3
+tapazite_stalagmite_3.name=Tapazite Stalagmite Phase 4
+tapazite_stalagmite_4.name=Tapazite Stalagmite Phase 5
+tapazite_stalagmite_5.name=Tapazite Stalagmite Phase 6
+tapazite_stalagmite_6.name=Tapazite Stalagmite Phase 7
+
+tapazite_stalactite_0.name=Tapazite Stalactite Phase 1
+tapazite_stalactite_1.name=Tapazite Stalactite Phase 2
+tapazite_stalactite_2.name=Tapazite Stalactite Phase 3
+tapazite_stalactite_3.name=Tapazite Stalactite Phase 4
+tapazite_stalactite_4.name=Tapazite Stalactite Phase 5
+tapazite_stalactite_5.name=Tapazite Stalactite Phase 6
+tapazite_stalactite_6.name=Tapazite Stalactite Phase 7
+
+#ENTITY LOCALIZATION
+
+entity.crazyores.zectium_core.name=Zectium Core
+entity.crazyores.copper_golem.name=Copper Golem
+entity.crazyores.sapphire_golem.name=Sapphire Golem
+entity.crazyores.adamite_golem.name=Adamite Golem
+entity.crazyores.ruby_golem.name=Ruby Golem
+entity.crazyores.fools_ruby_golem.name=Fool's Ruby Golem
+entity.crazyores.zectium_golem.name=Zectium Golem
+entity.crazyores.tapazite_golem.name=Tapazite Golem
+entity.crazyores.osmonium_golem.name=Osmonium Golem
+entity.crazyores.starconium_golem.name=Starconium Golem
+entity.crazyores.demonite_golem.name=Demonite Golem
+entity.crazyores.ender_golem.name=Ender Golem
+
+entity.crazyores.zectium_protector.name=Zectium Protector
+
+entity.crazyores.great_white_shark.name=Great White Shark
+entity.crazyores.adamite_shark.name=Torpedo Shark
+
+entity.crazyores.flaming_arrow.name=Flaming Arrow
+entity.crazyores.explosive_arrow.name=Explosive Arrow
+entity.crazyores.lightning_arrow.name=Lightning Arrow
+entity.crazyores.freezing_arrow.name=Freezing Arrow
+
+tileentity.crazyores.tapazite_crystal.name=Tapazite Crystal
+tileentity.crazyores.demonite_furnace.name=Demonite Furnace
+
+#SPAWN EGGS
+zectium_protector_egg.name=Spawn Zectium Protector
+great_white_shark_egg.name=Spawn Great White Shark
+adamite_shark_egg.name=Spawn Torpedo Shark
+
+# ORE DROPS 
+meteorite_coal.name=Meteorite Coal
+meteorite_gem.name=Meteorite Gem
+copper_ingot.name=Copper Ingot
+sapphire_gem.name=Sapphire Gem
+adamite_shard.name=Adamite Shard
+ruby_gem.name=Ruby Gem
+fools_ruby_gem.name=Fool's Ruby Gem
+zectium_ingot.name=Zectium Ingot
+tapazite_obelisk.name=Tapazite Obelisk
+tapazite_dust.name=Tapazite Dust
+osmonium_ingot.name=Osmonium Ingot
+starconium_gem.name=Starconium Gem
+fools_ruby_mush.name=Fool's Ruby Mush
+demonite_orb.name=Demonite Orb
+experium_orb.name=Experium Orb
+ender_gem.name=Ender Gem
+darkstone_bar.name=Darkstone Bar
+invisium_ingot.name=Invisium Ingot
+ultra_gem.name=Ultra Gem
+white_luminite_crystal.name=White Luminite Crystal
+
+zectium_core.name=Zectium Core
+invisium_wand.name=Invis O' Wand
+
+# PICKAXE LIST 
+meteorite_pickaxe.name=Meteorite Pickaxe
+copper_pickaxe.name=Copper Pickaxe
+adamite_pickaxe.name=Adamite Pickaxe
+sapphire_pickaxe.name=Sapphire Pickaxe
+ruby_pickaxe.name=Ruby Pickaxe
+zectium_pickaxe.name=Zectium Pickaxe
+tapazite_pickaxe.name=Tapazite Pickaxe
+osmonium_pickaxe.name=Osmonium Pickaxe
+starconium_pickaxe.name=Starconium Pickaxe
+invisium_pickaxe.name=Invisium Pickaxe
+ender_pickaxe.name=Ender Pickaxe
+
+# AXE LIST 
+meteorite_axe.name=Meteorite Axe
+copper_axe.name=Copper Axe
+adamite_axe.name=Adamite Axe
+sapphire_axe.name=Sapphire Axe
+ruby_axe.name=Ruby Axe
+zectium_axe.name=Zectium Axe
+tapazite_axe.name=Tapazite Axe
+osmonium_axe.name=Osmonium Axe
+starconium_axe.name=Starconium Axe
+invisium_axe.name=Invisium Axe
+ender_axe.name=Ender Axe
+
+# SHOVEL LIST 
+meteorite_shovel.name=Meteorite Shovel
+copper_shovel.name=Copper Shovel
+adamite_shovel.name=Adamite Shovel
+sapphire_shovel.name=Sapphire Shovel
+ruby_shovel.name=Ruby Shovel
+zectium_shovel.name=Zectium Shovel
+tapazite_shovel.name=Tapazite Shovel
+osmonium_shovel.name=Osmonium Shovel
+starconium_shovel.name=Starconium Shovel
+invisium_shovel.name=Invisium Shovel
+ender_shovel.name=Ender Shovel
+
+# SWORD LIST 
+meteorite_sword.name=Meteorite Sword
+copper_sword.name=Copper Sword
+adamite_sword.name=Adamite Sword
+sapphire_sword.name=Sapphire Sword
+ruby_sword.name=Ruby Sword
+zectium_sword.name=Zectium Sword
+tapazite_sword.name=Tapazite Sword
+osmonium_sword.name=Osmonium Sword
+starconium_sword.name=Starconium Sword
+invisium_sword.name=Invisium Sword
+ender_sword.name=Ender Sword
+
+# HOE LIST 
+meteorite_hoe.name=Meteorite Hoe
+copper_hoe.name=Copper Hoe
+adamite_hoe.name=Adamite Hoe
+sapphire_hoe.name=Sapphire Hoe
+ruby_hoe.name=Ruby Hoe
+zectium_hoe.name=Zectium Hoe
+tapazite_hoe.name=Tapazite Hoe
+osmonium_hoe.name=Osmonium Hoe
+starconium_hoe.name=Starconium Hoe
+invisium_hoe.name=Invisium Hoe
+ender_hoe.name=Ender Hoe
+
+# HAMMER LIST
+starconium_sledgehammer.name=Starconium Sledgehammer
+
+# HELMET LIST 
+copper_helmet.name=Copper Helmet
+sapphire_helmet.name=Sapphire Helmet
+adamite_helmet.name=Adamite Helmet
+meteorite_helmet.name=Meteorite Helmet
+ruby_helmet.name=Ruby Helmet
+zectium_helmet.name=Zectium Helmet
+tapazite_helmet.name=Tapazite Helmet
+osmonium_helmet.name=Osmonium Helmet
+starconium_helmet.name=Starconium Helmet
+invisium_helmet.name=Invisium Helmet
+ender_helmet.name=Ender Helmet
+
+# CHESTPLATE LIST 
+copper_chestplate.name=Copper Chestplate
+sapphire_chestplate.name=Sapphire Chestplate
+adamite_chestplate.name=Adamite Chestplate
+meteorite_chestplate.name=Meteorite Chestplate
+ruby_chestplate.name=Ruby Chestplate
+zectium_chestplate.name=Zectium Chestplate
+tapazite_chestplate.name=Tapazite Chestplate
+osmonium_chestplate.name=Osmonium Chestplate
+starconium_chestplate.name=Starconium Chestplate
+invisium_chestplate.name=Invisium Chestplate
+ender_chestplate.name=Ender Chestplate
+
+# LEGGING LIST 
+copper_leggings.name=Copper Leggings
+sapphire_leggings.name=Sapphire Leggings
+adamite_leggings.name=Adamite Leggings
+meteorite_leggings.name=Meteorite Leggings
+ruby_leggings.name=Ruby Leggings
+zectium_leggings.name=Zectium Leggings
+tapazite_leggings.name=Tapazite Leggings
+osmonium_leggings.name=Osmonium Leggings
+starconium_leggings.name=Starconium Leggings
+invisium_leggings.name=Invisium Leggings
+ender_leggings.name=Ender Leggings
+
+# BOOT LIST 
+copper_boots.name=Copper Boots
+sapphire_boots.name=Sapphire Boots
+adamite_boots.name=Adamite Boots
+meteorite_boots.name=Meteorite Boots
+ruby_boots.name=Ruby Boots
+zectium_boots.name=Zectium Boots
+tapazite_boots.name=Tapazite Boots
+osmonium_boots.name=Osmonium Boots
+starconium_boots.name=Starconium Boots
+invisium_boots.name=Invisium Boots
+ender_boots.name=Ender Boots
+
+# BUCKET LIST 
+copper_bucket_empty.name=Copper Bucket
+copper_bucket_water.name=Water Bucket
+copper_bucket_lava.name=Lava Bucket
+copper_bucket_milk.name=Milk
+
+# ITEMS LIST 
+starconium_shard.name=Starconium Shard
+
+chocolate_cake_placer.name=Chocolate Cake
+strawberry_cake_placer.name=Strawberry Cake
+birthday_cake_placer.name=Birthday Cake
+
+raw_shark_meat.name=Raw Shark Meat
+cooked_shark_meat.name=Cooked Shark Meat
+
+lightened_brick_item.name=Lightened Brick
+
+luminite_crystal_white.name=White Luminite Crystal
+luminite_crystal_red.name=Red Luminite Crystal
+luminite_crystal_orange.name=Orange Luminite Crystal
+luminite_crystal_yellow.name=Yellow Luminite Crystal
+luminite_crystal_green.name=Green Luminite Crystal
+luminite_crystal_cyan.name=Cyan Luminite Crystal
+luminite_crystal_blue.name=Blue Luminite Crystal
+luminite_crystal_purple.name=Purple Luminite Crystal
+luminite_crystal_pink.name=Pink Luminite Crystal
+luminite_crystal_black.name=Black Luminite Crystal
+
+# BOW LIST 
+hell_bow.name=Hell Bow
+swift_bow.name=Swift Bow
+dual_shot_bow.name=Dual Shot Bow
+confusion_bow.name=Confusion Bow
+
+# ARROW LIST 
+flaming_arrow.name=Flaming Arrow
+lightning_arrow.name=Lightning Arrow
+frozen_arrow.name=Freezing Arrow
+explosive_arrow.name=Explosive Arrow
+
+flaming_arrow_head.name=Flaming Arrowhead
+lightning_arrow_head.name=Lightning Arrowhead
+frozen_arrow_head.name=Frozen Arrowhead
+explosive_arrow_head.name=Explosive Arrowhead
+
+# TAB LOCALIZATION
+itemGroup.crazyOresBlocks=CrazyOres Blocks
+itemGroup.crazyOresItems=CrazyOres Items
+itemGroup.crazyOresTools=CrazyOres Tools
+itemGroup.crazyOresArmor=CrazyOres Armor
+itemGroup.crazyOresWeapons=CrazyOres Weapons
+itemGroup.crazyOresFood=CrazyOres Food
+itemGroup.crazyOresMobs=CrazyOres Mobs
+
+# CONFIG LOCALIZATION
+config.category.loadPacks=Load Packs
+config.category.oreGeneration=Ore Generation
+config.category.miscSettings=Miscellaneous Settings
+
+config.node.generateCopperOre=Generate Copper Ore
+config.node.generateMeteoriteOre=Generate Meteorite Ore
+config.node.generateAdamiteOre=Generate Adamite Ore
+config.node.generateSapphireOre=Generate Sapphire Ore
+config.node.generateRubyOre=Generate Ruby Ore
+config.node.generateFoolsRubyOre=Generate Fools Ruby Ore
+config.node.generateZectiumOre=Generate Zectium Ore
+config.node.generateTapaziteOre=Generate Tapazite Ore
+config.node.generateOsmoniumOre=Generate Osmonium Ore
+config.node.generateStarconiumOre=Generate Starconium Ore
+config.node.generateExperiumOre=Generate Experium Ore
+
+config.node.generateDemoniteOre=Generate Demonite Ore
+config.node.generateInvisiumOre=Generate Invisium Ore
+config.node.generateDarkstoneOre=Generate Darkstone Ore
+config.node.generateLuminiteOre=Generate Luminite Ore
+
+config.node.generateEnderOre=Generate Ender Ore
+
+config.node.zectiumCoreExplodes=Zectium Core Explodes When Thrown
+config.node.explosiveArrowExplodes=Explosive Arrow Explodes When Shot
+config.node.fireSpreadsArrow=Flaming and Firey Explosive Arrows Spread Fire When Shot
+config.node.spreadTapazite=Tapazite Spread more Crystals(Laggy after a while)
+
+config.node.foolsRubyGolemMaxHeight=Maximum Fools Ruby Golem Height
