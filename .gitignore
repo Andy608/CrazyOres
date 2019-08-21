@@ -50,3 +50,5 @@ changelog\.txt
 CREDITS\.txt
 
 gradle\.properties
+
+\.vscode/settings\.json
