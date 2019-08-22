@@ -357,29 +357,6 @@ itemGroup.crazyOresFood=CrazyOres Food
 itemGroup.crazyOresMobs=CrazyOres Mobs
 
 # CONFIG LOCALIZATION
-config.category.loadPacks=Load Packs
-config.category.oreGeneration=Ore Generation
-config.category.miscSettings=Miscellaneous Settings
-
-config.node.generateCopperOre=Generate Copper Ore
-config.node.generateMeteoriteOre=Generate Meteorite Ore
-config.node.generateAdamiteOre=Generate Adamite Ore
-config.node.generateSapphireOre=Generate Sapphire Ore
-config.node.generateRubyOre=Generate Ruby Ore
-config.node.generateFoolsRubyOre=Generate Fools Ruby Ore
-config.node.generateZectiumOre=Generate Zectium Ore
-config.node.generateTapaziteOre=Generate Tapazite Ore
-config.node.generateOsmoniumOre=Generate Osmonium Ore
-config.node.generateStarconiumOre=Generate Starconium Ore
-config.node.generateExperiumOre=Generate Experium Ore
-
-config.node.generateDemoniteOre=Generate Demonite Ore
-config.node.generateInvisiumOre=Generate Invisium Ore
-config.node.generateDarkstoneOre=Generate Darkstone Ore
-config.node.generateLuminiteOre=Generate Luminite Ore
-
-config.node.generateEnderOre=Generate Ender Ore
-
 config.node.zectiumCoreExplodes=Zectium Core Explodes When Thrown
 config.node.explosiveArrowExplodes=Explosive Arrow Explodes When Shot
 config.node.fireSpreadsArrow=Flaming and Firey Explosive Arrows Spread Fire When Shot

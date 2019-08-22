@@ -20,19 +20,18 @@ public class CrazyOres
 
 	public CrazyOres() 
 	{
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         
         MinecraftForge.EVENT_BUS.register(this);
 	}
 	
-	private void setup(final FMLCommonSetupEvent event)
+	private void commonSetup(final FMLCommonSetupEvent event)
     {
 		LoggerUtil.info("HELLO FROM PREINIT");
     }
 	
-	private void doClientStuff(final FMLClientSetupEvent event) 
+	private void clientSetup(final FMLClientSetupEvent event) 
 	{
-		
     }
 }

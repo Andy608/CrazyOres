@@ -51,4 +51,4 @@ CREDITS\.txt
 
 gradle\.properties
 
-\.vscode/settings\.json
+.vscode/*
