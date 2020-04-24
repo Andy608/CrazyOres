@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 public class ZectiumCoreItem extends Item {
 	
 	public ZectiumCoreItem(Properties properties) {
-		super(properties);
+		super(properties.maxStackSize(32));
 	}
 	
 	@Override
