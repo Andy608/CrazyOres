@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import com.crazyores.init.ModItemGroups;
+import com.crazyores.init.CrazyItemGroups;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,7 +19,7 @@ public class ItemDeferredRegister extends CoreDeferredRegister<Item> {
 	}
 	
 	public static Item.Properties getBaseProps() {
-		return new Item.Properties().group(ModItemGroups.CO_ITEMS_ITEM_GROUP);
+		return new Item.Properties().group(CrazyItemGroups.CO_ITEMS_ITEM_GROUP);
 	}
 	
 	public CoreRegistryObject<Item> register(String name) {
