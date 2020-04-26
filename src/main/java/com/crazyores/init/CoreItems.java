@@ -3,6 +3,7 @@ package com.crazyores.init;
 import com.crazyores.CrazyOres;
 import com.crazyores.init.registration.CoreRegistryObject;
 import com.crazyores.init.registration.ItemDeferredRegister;
+import com.crazyores.item.CoreAxe;
 import com.crazyores.item.CorePickaxe;
 import com.crazyores.item.CrazyTiers;
 import com.crazyores.item.ZectiumCoreItem;
@@ -57,19 +58,19 @@ public class CoreItems {
 	public static final CoreRegistryObject<CorePickaxe> STARCONIUM_PICKAXE = ITEMS.register("starconium_pickaxe", () -> new CorePickaxe(CrazyTiers.STARCONIUM));
 	public static final CoreRegistryObject<CorePickaxe> INVISIUM_PICKAXE = ITEMS.register("invisium_pickaxe", () -> new CorePickaxe(CrazyTiers.INVISIUM));
 	public static final CoreRegistryObject<CorePickaxe> ENDER_PICKAXE = ITEMS.register("ender_pickaxe", () -> new CorePickaxe(CrazyTiers.ENDER));
-//	
-//	/** Axe List **/
-//	public static final CoreRegistryObject<Item> COPPER_AXE = ITEMS.register("copper_axe");
-//	public static final CoreRegistryObject<Item> METEORITE_AXE = ITEMS.register("meteorite_axe");
-//	public static final CoreRegistryObject<Item> ADAMITE_AXE = ITEMS.register("adamite_axe");
-//	public static final CoreRegistryObject<Item> SAPPHIRE_AXE = ITEMS.register("sapphire_axe");
-//	public static final CoreRegistryObject<Item> RUBY_AXE = ITEMS.register("ruby_axe");
-//	public static final CoreRegistryObject<Item> ZECTIUM_AXE = ITEMS.register("zectium_axe");
-//	public static final CoreRegistryObject<Item> TAPAZITE_AXE = ITEMS.register("tapazite_axe");
-//	public static final CoreRegistryObject<Item> OSMONIUM_AXE = ITEMS.register("osmonium_axe");
-//	public static final CoreRegistryObject<Item> STARCONIUM_AXE = ITEMS.register("starconium_axe");
-//	public static final CoreRegistryObject<Item> INVISIUM_AXE = ITEMS.register("invisium_axe");
-//	public static final CoreRegistryObject<Item> ENDER_AXE = ITEMS.register("ender_axe");
+	
+	/** Axe List **/
+	public static final CoreRegistryObject<CoreAxe> COPPER_AXE = ITEMS.register("copper_axe", () -> new CoreAxe(CrazyTiers.COPPER));
+	public static final CoreRegistryObject<CoreAxe> METEORITE_AXE = ITEMS.register("meteorite_axe", () -> new CoreAxe(CrazyTiers.METEORITE));
+	public static final CoreRegistryObject<CoreAxe> ADAMITE_AXE = ITEMS.register("adamite_axe", () -> new CoreAxe(CrazyTiers.ADAMITE));
+	public static final CoreRegistryObject<CoreAxe> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", () -> new CoreAxe(CrazyTiers.SAPPHIRE));
+	public static final CoreRegistryObject<CoreAxe> RUBY_AXE = ITEMS.register("ruby_axe", () -> new CoreAxe(CrazyTiers.RUBY));
+	public static final CoreRegistryObject<CoreAxe> ZECTIUM_AXE = ITEMS.register("zectium_axe", () -> new CoreAxe(CrazyTiers.ZECTIUM));
+	public static final CoreRegistryObject<CoreAxe> TAPAZITE_AXE = ITEMS.register("tapazite_axe", () -> new CoreAxe(CrazyTiers.TAPAZITE));
+	public static final CoreRegistryObject<CoreAxe> OSMONIUM_AXE = ITEMS.register("osmonium_axe", () -> new CoreAxe(CrazyTiers.OSMONIUM));
+	public static final CoreRegistryObject<CoreAxe> STARCONIUM_AXE = ITEMS.register("starconium_axe", () -> new CoreAxe(CrazyTiers.STARCONIUM));
+	public static final CoreRegistryObject<CoreAxe> INVISIUM_AXE = ITEMS.register("invisium_axe", () -> new CoreAxe(CrazyTiers.INVISIUM));
+	public static final CoreRegistryObject<CoreAxe> ENDER_AXE = ITEMS.register("ender_axe", () -> new CoreAxe(CrazyTiers.ENDER));
 //
 //	/** Shovel List **/
 // 	public static final CoreRegistryObject<Item> COPPER_SHOVEL = ITEMS.register("copper_shovel");

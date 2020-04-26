@@ -6,29 +6,27 @@ import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FireBlock;
-import net.minecraft.block.NetherPortalBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
-import net.minecraft.item.PickaxeItem;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Direction;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 
-public class CorePickaxe extends PickaxeItem {
+public class CoreAxe extends AxeItem {
 
 	private IItemTier tier;
-
-	public CorePickaxe(IItemTier tier) {
-		super(tier, 1, -2.8F, ItemDeferredRegister.getBaseProps());
+	
+	public CoreAxe(IItemTier tier) {
+		super(tier, 6F, -3.2F, ItemDeferredRegister.getBaseProps());
 		this.tier = tier;
 	}
 
@@ -52,7 +50,7 @@ public class CorePickaxe extends PickaxeItem {
 			IWorld iworld = context.getWorld();
 			BlockPos blockpos = context.getPos();
 			BlockState blockstate = iworld.getBlockState(blockpos);
-			if (isUnlitCampfire(blockstate)) {
+			if (CorePickaxe.isUnlitCampfire(blockstate)) {
 				iworld.playSound(playerentity, blockpos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F,
 						random.nextFloat() * 0.4F + 0.8F);
 				iworld.setBlockState(blockpos, blockstate.with(BlockStateProperties.LIT, Boolean.valueOf(true)), 11);
@@ -65,7 +63,7 @@ public class CorePickaxe extends PickaxeItem {
 				return ActionResultType.SUCCESS;
 			} else {
 				BlockPos blockpos1 = blockpos.offset(context.getFace());
-				if (isEligibleForFire(iworld.getBlockState(blockpos1), iworld, blockpos1)) {
+				if (CorePickaxe.isEligibleForFire(iworld.getBlockState(blockpos1), iworld, blockpos1)) {
 					iworld.playSound(playerentity, blockpos1, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS,
 							1.0F, random.nextFloat() * 0.4F + 0.8F);
 					BlockState blockstate1 = ((FireBlock) Blocks.FIRE).getStateForPlacement(iworld, blockpos1);
@@ -87,26 +85,4 @@ public class CorePickaxe extends PickaxeItem {
 
 		return super.onItemUse(context);
 	}
-
-	public static boolean isUnlitCampfire(BlockState state) {
-		return state.getBlock() == Blocks.CAMPFIRE && !state.get(BlockStateProperties.WATERLOGGED)
-				&& !state.get(BlockStateProperties.LIT);
-	}
-
-	@SuppressWarnings("deprecation")
-	public static boolean isEligibleForFire(BlockState blockState, IWorld world, BlockPos blockPos) {
-		BlockState fireBlockState = ((FireBlock) Blocks.FIRE).getStateForPlacement(world, blockPos);
-		boolean flag = false;
-
-		for (Direction direction : Direction.Plane.HORIZONTAL) {
-			BlockPos framePos = blockPos.offset(direction);
-			if (world.getBlockState(framePos).isPortalFrame(world, framePos)
-					&& ((NetherPortalBlock) Blocks.NETHER_PORTAL).isPortal(world, blockPos) != null) {
-				flag = true;
-			}
-		}
-
-		return blockState.isAir() && (fireBlockState.isValidPosition(world, blockPos) || flag);
-	}
-
 }
