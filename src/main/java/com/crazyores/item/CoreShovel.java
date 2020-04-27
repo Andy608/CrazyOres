@@ -9,10 +9,10 @@ import net.minecraft.block.FireBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.item.AxeItem;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.ShovelItem;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.SoundCategory;
@@ -20,15 +20,15 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 
-public class CoreAxe extends AxeItem {
+public class CoreShovel extends ShovelItem {
 
 	private IItemTier tier;
 	
-	public CoreAxe(IItemTier tier) {
-		super(tier, 6F, -3.2F, ItemDeferredRegister.getBaseProps());
+	public CoreShovel(IItemTier tier) {
+		super(tier, 1.5F, -3F, ItemDeferredRegister.getBaseProps());
 		this.tier = tier;
 	}
-
+	
 	@Override
 	public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 		if (tier.equals(CrazyTiers.METEORITE)) {
@@ -79,4 +79,5 @@ public class CoreAxe extends AxeItem {
 
 		return super.onItemUse(context);
 	}
+
 }

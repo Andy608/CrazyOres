@@ -4,7 +4,10 @@ import com.crazyores.CrazyOres;
 import com.crazyores.init.registration.CoreRegistryObject;
 import com.crazyores.init.registration.ItemDeferredRegister;
 import com.crazyores.item.CoreAxe;
+import com.crazyores.item.CoreHoe;
 import com.crazyores.item.CorePickaxe;
+import com.crazyores.item.CoreShovel;
+import com.crazyores.item.CoreSword;
 import com.crazyores.item.CrazyTiers;
 import com.crazyores.item.ZectiumCoreItem;
 
@@ -71,50 +74,50 @@ public class CoreItems {
 	public static final CoreRegistryObject<CoreAxe> STARCONIUM_AXE = ITEMS.register("starconium_axe", () -> new CoreAxe(CrazyTiers.STARCONIUM));
 	public static final CoreRegistryObject<CoreAxe> INVISIUM_AXE = ITEMS.register("invisium_axe", () -> new CoreAxe(CrazyTiers.INVISIUM));
 	public static final CoreRegistryObject<CoreAxe> ENDER_AXE = ITEMS.register("ender_axe", () -> new CoreAxe(CrazyTiers.ENDER));
-//
-//	/** Shovel List **/
-// 	public static final CoreRegistryObject<Item> COPPER_SHOVEL = ITEMS.register("copper_shovel");
-//	public static final CoreRegistryObject<Item> METEORITE_SHOVEL = ITEMS.register("meteorite_shovel");
-//	public static final CoreRegistryObject<Item> ADAMITE_SHOVEL = ITEMS.register("adamite_shovel");
-//	public static final CoreRegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel");
-//	public static final CoreRegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel");
-//	public static final CoreRegistryObject<Item> ZECTIUM_SHOVEL = ITEMS.register("zectium_shovel");
-//	public static final CoreRegistryObject<Item> TAPAZITE_SHOVEL = ITEMS.register("tapazite_shovel");
-//	public static final CoreRegistryObject<Item> OSMONIUM_SHOVEL = ITEMS.register("osmonium_shovel");
-//	public static final CoreRegistryObject<Item> STARCONIUM_SHOVEL = ITEMS.register("starconium_shovel");
-//	public static final CoreRegistryObject<Item> INVISIUM_SHOVEL = ITEMS.register("invisium_shovel");
-//	public static final CoreRegistryObject<Item> ENDER_SHOVEL = ITEMS.register("ender_shovel");
-//
-//	/** Sword List **/
-//	public static final CoreRegistryObject<Item> METEORITE_SWORD = ITEMS.register("meteorite_sword");
-//	public static final CoreRegistryObject<Item> COPPER_SWORD = ITEMS.register("copper_sword");
-//	public static final CoreRegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword");
-//	public static final CoreRegistryObject<Item> ADAMITE_SWORD = ITEMS.register("adamite_sword");
-//	public static final CoreRegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword");
-//	public static final CoreRegistryObject<Item> ZECTIUM_SWORD = ITEMS.register("zectium_sword");
-//	public static final CoreRegistryObject<Item> TAPAZITE_SWORD = ITEMS.register("tapazite_sword");
-//	public static final CoreRegistryObject<Item> OSMONIUM_SWORD = ITEMS.register("osmonium_sword");
-//	public static final CoreRegistryObject<Item> STARCONIUM_SWORD = ITEMS.register("starconium_sword");
-//	public static final CoreRegistryObject<Item> INVISIUM_SWORD = ITEMS.register("invisium_sword");
-//	public static final CoreRegistryObject<Item> ENDER_SWORD = ITEMS.register("ender_sword");
-//	
-//	/** Hoe List **/
-//	public static final CoreRegistryObject<Item> METEORITE_HOE = ITEMS.register("meteorite_hoe");
-//	public static final CoreRegistryObject<Item> COPPER_HOE = ITEMS.register("copper_hoe");
-//	public static final CoreRegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe");
-//	public static final CoreRegistryObject<Item> ADAMITE_HOE = ITEMS.register("adamite_hoe");
-//	public static final CoreRegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe");
-//	public static final CoreRegistryObject<Item> ZECTIUM_HOE = ITEMS.register("zectium_hoe");
-//	public static final CoreRegistryObject<Item> TAPAZITE_HOE = ITEMS.register("tapazite_hoe");
-//	public static final CoreRegistryObject<Item> OSMONIUM_HOE = ITEMS.register("osmonium_hoe");
-//	public static final CoreRegistryObject<Item> STARCONIUM_HOE = ITEMS.register("starconium_hoe");
-//	public static final CoreRegistryObject<Item> INVISIUM_HOE = ITEMS.register("invisium_hoe");
-//	public static final CoreRegistryObject<Item> ENDER_HOE = ITEMS.register("ender_hoe");
-//	
-//	/** Hammer List **/
-//
+
+	/** Shovel List **/
+ 	public static final CoreRegistryObject<CoreShovel> COPPER_SHOVEL = ITEMS.register("copper_shovel", () -> new CoreShovel(CrazyTiers.COPPER));
+	public static final CoreRegistryObject<CoreShovel> METEORITE_SHOVEL = ITEMS.register("meteorite_shovel", () -> new CoreShovel(CrazyTiers.METEORITE));
+	public static final CoreRegistryObject<CoreShovel> ADAMITE_SHOVEL = ITEMS.register("adamite_shovel", () -> new CoreShovel(CrazyTiers.ADAMITE));
+	public static final CoreRegistryObject<CoreShovel> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel", () -> new CoreShovel(CrazyTiers.SAPPHIRE));
+	public static final CoreRegistryObject<CoreShovel> RUBY_SHOVEL = ITEMS.register("ruby_shovel", () -> new CoreShovel(CrazyTiers.RUBY));
+	public static final CoreRegistryObject<CoreShovel> ZECTIUM_SHOVEL = ITEMS.register("zectium_shovel", () -> new CoreShovel(CrazyTiers.ZECTIUM));
+	public static final CoreRegistryObject<CoreShovel> TAPAZITE_SHOVEL = ITEMS.register("tapazite_shovel", () -> new CoreShovel(CrazyTiers.TAPAZITE));
+	public static final CoreRegistryObject<CoreShovel> OSMONIUM_SHOVEL = ITEMS.register("osmonium_shovel", () -> new CoreShovel(CrazyTiers.OSMONIUM));
+	public static final CoreRegistryObject<CoreShovel> STARCONIUM_SHOVEL = ITEMS.register("starconium_shovel", () -> new CoreShovel(CrazyTiers.STARCONIUM));
+	public static final CoreRegistryObject<CoreShovel> INVISIUM_SHOVEL = ITEMS.register("invisium_shovel", () -> new CoreShovel(CrazyTiers.INVISIUM));
+	public static final CoreRegistryObject<CoreShovel> ENDER_SHOVEL = ITEMS.register("ender_shovel", () -> new CoreShovel(CrazyTiers.ENDER));
+
+	/** Sword List **/
+	public static final CoreRegistryObject<CoreSword> METEORITE_SWORD = ITEMS.register("meteorite_sword", () -> new CoreSword(CrazyTiers.METEORITE));
+	public static final CoreRegistryObject<CoreSword> COPPER_SWORD = ITEMS.register("copper_sword", () -> new CoreSword(CrazyTiers.COPPER));
+	public static final CoreRegistryObject<CoreSword> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", () -> new CoreSword(CrazyTiers.SAPPHIRE));
+	public static final CoreRegistryObject<CoreSword> ADAMITE_SWORD = ITEMS.register("adamite_sword", () -> new CoreSword(CrazyTiers.ADAMITE));
+	public static final CoreRegistryObject<CoreSword> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new CoreSword(CrazyTiers.RUBY));
+	public static final CoreRegistryObject<CoreSword> ZECTIUM_SWORD = ITEMS.register("zectium_sword", () -> new CoreSword(CrazyTiers.ZECTIUM));
+	public static final CoreRegistryObject<CoreSword> TAPAZITE_SWORD = ITEMS.register("tapazite_sword", () -> new CoreSword(CrazyTiers.TAPAZITE));
+	public static final CoreRegistryObject<CoreSword> OSMONIUM_SWORD = ITEMS.register("osmonium_sword", () -> new CoreSword(CrazyTiers.OSMONIUM));
+	public static final CoreRegistryObject<CoreSword> STARCONIUM_SWORD = ITEMS.register("starconium_sword", () -> new CoreSword(CrazyTiers.STARCONIUM));
+	public static final CoreRegistryObject<CoreSword> INVISIUM_SWORD = ITEMS.register("invisium_sword", () -> new CoreSword(CrazyTiers.INVISIUM));
+	public static final CoreRegistryObject<CoreSword> ENDER_SWORD = ITEMS.register("ender_sword", () -> new CoreSword(CrazyTiers.ENDER));
+	
+	/** Hoe List **/
+	public static final CoreRegistryObject<CoreHoe> METEORITE_HOE = ITEMS.register("meteorite_hoe", () -> new CoreHoe(CrazyTiers.METEORITE, -1.5F));
+	public static final CoreRegistryObject<CoreHoe> COPPER_HOE = ITEMS.register("copper_hoe", () -> new CoreHoe(CrazyTiers.COPPER, -1.5F));
+	public static final CoreRegistryObject<CoreHoe> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", () -> new CoreHoe(CrazyTiers.SAPPHIRE));
+	public static final CoreRegistryObject<CoreHoe> ADAMITE_HOE = ITEMS.register("adamite_hoe", () -> new CoreHoe(CrazyTiers.ADAMITE, -0.5F));
+	public static final CoreRegistryObject<CoreHoe> RUBY_HOE = ITEMS.register("ruby_hoe", () -> new CoreHoe(CrazyTiers.RUBY));
+	public static final CoreRegistryObject<CoreHoe> ZECTIUM_HOE = ITEMS.register("zectium_hoe", () -> new CoreHoe(CrazyTiers.ZECTIUM));
+	public static final CoreRegistryObject<CoreHoe> TAPAZITE_HOE = ITEMS.register("tapazite_hoe", () -> new CoreHoe(CrazyTiers.TAPAZITE));
+	public static final CoreRegistryObject<CoreHoe> OSMONIUM_HOE = ITEMS.register("osmonium_hoe", () -> new CoreHoe(CrazyTiers.OSMONIUM));
+	public static final CoreRegistryObject<CoreHoe> STARCONIUM_HOE = ITEMS.register("starconium_hoe", () -> new CoreHoe(CrazyTiers.STARCONIUM));
+	public static final CoreRegistryObject<CoreHoe> INVISIUM_HOE = ITEMS.register("invisium_hoe", () -> new CoreHoe(CrazyTiers.INVISIUM));
+	public static final CoreRegistryObject<CoreHoe> ENDER_HOE = ITEMS.register("ender_hoe", () -> new CoreHoe(CrazyTiers.ENDER));
+	
+	/** Hammer List **/
+
 //	public static final CoreRegistryObject<Item> STARCONIUM_SLEDGEHAMMER = ITEMS.register("starconium_sledgehammer");
-//
+
 //	/** Bucket List **/
 //	public static final CoreRegistryObject<Item> COPPER_BUCKET_EMPTY = ITEMS.register("copper_bucket_empty");
 //	public static final CoreRegistryObject<Item> COPPER_BUCKET_WATER = ITEMS.register("copper_bucket_water");

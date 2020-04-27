@@ -10,7 +10,6 @@ import net.minecraft.block.NetherPortalBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
@@ -36,11 +35,6 @@ public class CorePickaxe extends PickaxeItem {
 	public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 		if (tier.equals(CrazyTiers.METEORITE)) {
 			target.setFire(8);
-			stack.damageItem(2, attacker, (e) -> {
-				e.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-			});
-
-			return true;
 		}
 
 		return super.hitEntity(stack, target, attacker);
