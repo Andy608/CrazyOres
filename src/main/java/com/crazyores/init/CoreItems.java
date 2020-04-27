@@ -7,6 +7,7 @@ import com.crazyores.item.CoreAxe;
 import com.crazyores.item.CoreHoe;
 import com.crazyores.item.CorePickaxe;
 import com.crazyores.item.CoreShovel;
+import com.crazyores.item.CoreSledgehammer;
 import com.crazyores.item.CoreSword;
 import com.crazyores.item.CrazyTiers;
 import com.crazyores.item.ZectiumCoreItem;
@@ -116,7 +117,8 @@ public class CoreItems {
 	
 	/** Hammer List **/
 
-//	public static final CoreRegistryObject<Item> STARCONIUM_SLEDGEHAMMER = ITEMS.register("starconium_sledgehammer");
+	public static final CoreRegistryObject<CoreSledgehammer> STARCONIUM_SLEDGEHAMMER = ITEMS.register("starconium_sledgehammer",
+			() -> new CoreSledgehammer(3, -3.2F, CrazyTiers.STARCONIUM_HAMMER));
 
 //	/** Bucket List **/
 //	public static final CoreRegistryObject<Item> COPPER_BUCKET_EMPTY = ITEMS.register("copper_bucket_empty");
