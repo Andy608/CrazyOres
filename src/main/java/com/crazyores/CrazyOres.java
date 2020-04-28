@@ -1,28 +1,10 @@
 package com.crazyores;
 
-import com.crazyores.item.CopperBucket;
-import com.crazyores.util.EmptyBucketDispenseBehavior;
-import com.crazyores.util.FullBucketDispenseBehavior;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
+import com.crazyores.dispenser.EmptyBucketDispense;
+import com.crazyores.dispenser.FullBucketDispense;
+import com.crazyores.dispenser.ZectiumCoreDispense;
 import net.minecraft.block.DispenserBlock;
-import net.minecraft.block.IBucketPickupHandler;
-import net.minecraft.dispenser.DefaultDispenseItemBehavior;
-import net.minecraft.dispenser.IBlockSource;
 import net.minecraft.dispenser.IDispenseItemBehavior;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.FlowingFluid;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.item.BucketItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.tileentity.DispenserTileEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.World;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -52,13 +34,14 @@ public class CrazyOres {
 	}
 
 	private void commonSetup(FMLCommonSetupEvent event) {
-		IDispenseItemBehavior idispenseitembehavior = new FullBucketDispenseBehavior();
+		IDispenseItemBehavior idispenseitembehavior = new FullBucketDispense();
 		DispenserBlock.registerDispenseBehavior(CoreItems.COPPER_BUCKET_LAVA.get(), idispenseitembehavior);
 		DispenserBlock.registerDispenseBehavior(CoreItems.COPPER_BUCKET_WATER.get(), idispenseitembehavior);
 //		DispenserBlock.registerDispenseBehavior(Items.SALMON_BUCKET, idispenseitembehavior);
 //		DispenserBlock.registerDispenseBehavior(Items.COD_BUCKET, idispenseitembehavior);
 //		DispenserBlock.registerDispenseBehavior(Items.PUFFERFISH_BUCKET, idispenseitembehavior);
 //		DispenserBlock.registerDispenseBehavior(Items.TROPICAL_FISH_BUCKET, idispenseitembehavior);
-		DispenserBlock.registerDispenseBehavior(CoreItems.COPPER_BUCKET_EMPTY.get(), new EmptyBucketDispenseBehavior());
+		DispenserBlock.registerDispenseBehavior(CoreItems.COPPER_BUCKET_EMPTY.get(), new EmptyBucketDispense());
+		DispenserBlock.registerDispenseBehavior(CoreItems.ZECTIUM_CORE.get(), new ZectiumCoreDispense());
 	}
 }

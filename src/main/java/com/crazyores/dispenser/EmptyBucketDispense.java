@@ -1,4 +1,4 @@
-package com.crazyores.util;
+package com.crazyores.dispenser;
 
 import com.crazyores.item.CopperBucket;
 import net.minecraft.block.Block;
@@ -15,7 +15,7 @@ import net.minecraft.tileentity.DispenserTileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 
-public class EmptyBucketDispenseBehavior extends DefaultDispenseItemBehavior {
+public class EmptyBucketDispense extends DefaultDispenseItemBehavior {
     private final DefaultDispenseItemBehavior field_229426_b_ = new DefaultDispenseItemBehavior();
 
     @Override

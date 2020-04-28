@@ -1,4 +1,4 @@
-package com.crazyores.util;
+package com.crazyores.dispenser;
 
 import com.crazyores.init.CoreItems;
 import com.crazyores.item.CopperBucket;
@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
 
-public class FullBucketDispenseBehavior extends DefaultDispenseItemBehavior {
+public class FullBucketDispense extends DefaultDispenseItemBehavior {
     private final DefaultDispenseItemBehavior field_218406_b = new DefaultDispenseItemBehavior();
 
     @Override
