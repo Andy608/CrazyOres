@@ -17,7 +17,11 @@ import net.minecraft.item.TieredItem;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-//TODO: UNFINISHED
+/* TODO: As of right now, sledgehammers inherit TieredItem.
+ * Should this be kept as is, it will only be enchantable by enchantments with BREAKABLE enchantment
+ * types. If inheritance is changed to ToolItem, then will also include DIGGER enchantments,
+ * and if inheritance is SwordItem then ALL (whatever that means...)
+ */
 public class CoreSledgehammer extends TieredItem {
 	private final IItemTier tier;
 	private final float attackDamage;
