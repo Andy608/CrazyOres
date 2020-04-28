@@ -8,10 +8,7 @@ import com.crazyores.init.CoreItems;
 import com.crazyores.util.CopperBucketWrapper;
 
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.CauldronBlock;
-import net.minecraft.block.IBucketPickupHandler;
-import net.minecraft.block.ILiquidContainer;
+import net.minecraft.block.*;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -36,6 +33,7 @@ import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.RayTraceContext;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 
 public class CopperBucket extends BucketItem {
 	private final Fluid containedBlock;
@@ -87,10 +85,10 @@ public class CopperBucket extends BucketItem {
 										: SoundEvents.ITEM_BUCKET_FILL;
 							player.playSound(soundevent, 1.0F, 1.0F);
 							ItemStack itemstack1 = this.fillBucket(itemstack, player,
-									this.getCopperVersionOfBucket(fluid.getFilledBucket()));
+									getCopperVersionOfBucket(fluid.getFilledBucket()));
 							if (!world.isRemote) {
 								CriteriaTriggers.FILLED_BUCKET.trigger((ServerPlayerEntity) player,
-										new ItemStack(this.getCopperVersionOfBucket(fluid.getFilledBucket())));
+										new ItemStack(getCopperVersionOfBucket(fluid.getFilledBucket())));
 							}
 
 							return ActionResult.func_226248_a_(itemstack1);
@@ -222,15 +220,15 @@ public class CopperBucket extends BucketItem {
 	 * @implNote Gotta be ItemStack-sensitive these days... this function converts a
 	 *           standard MC iron bucket to Copper version.
 	 **/
-	public Item getCopperVersionOfBucket(ItemStack bucket) {
-		return this.getCopperVersionOfBucket(bucket.getItem());
+	public static Item getCopperVersionOfBucket(ItemStack bucket) {
+		return getCopperVersionOfBucket(bucket.getItem());
 	}
 
 	/**
 	 * @author ISQ
 	 * @implNote This function converts a standard MC iron bucket to Copper version.
 	 **/
-	public Item getCopperVersionOfBucket(Item bucket) {
+	public static Item getCopperVersionOfBucket(Item bucket) {
 		/*
 		 * TODO: So uhhh... apparently somewhere in between 1.7.10 and 1.15 they decided
 		 * to add fish entities in the water, which is dope. But also you can catch fish
@@ -248,6 +246,6 @@ public class CopperBucket extends BucketItem {
 		} else if (bucket == Items.MILK_BUCKET) {
 			return CoreItems.COPPER_BUCKET_MILK.get();
 		}
-		return null;
+		return CoreItems.COPPER_BUCKET_EMPTY.get();
 	}
 }
