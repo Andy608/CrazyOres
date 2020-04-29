@@ -13,6 +13,8 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ShovelItem;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.SoundCategory;
@@ -31,11 +33,16 @@ public class CoreShovel extends ShovelItem {
 	
 	@Override
 	public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+		boolean success = true;
+
 		if (tier.equals(CrazyTiers.METEORITE)) {
 			target.setFire(8);
 		}
+		else if (tier.equals(CrazyTiers.INVISIUM)) {
+			success = target.addPotionEffect(new EffectInstance(Effects.INVISIBILITY, 100, 0, false, false));
+		}
 
-		return super.hitEntity(stack, target, attacker);
+		return success && super.hitEntity(stack, target, attacker);
 	}
 
 	public ActionResultType onItemUse(ItemUseContext context) {
