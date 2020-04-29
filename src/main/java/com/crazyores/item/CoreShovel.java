@@ -1,7 +1,9 @@
 package com.crazyores.item;
 
+import com.crazyores.CrazyOres;
 import com.crazyores.init.registration.ItemDeferredRegister;
 
+import com.crazyores.util.InvisiumEffectInstance;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -13,12 +15,15 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ShovelItem;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
+import org.apache.logging.log4j.Level;
 
 public class CoreShovel extends ShovelItem {
 
@@ -31,11 +36,18 @@ public class CoreShovel extends ShovelItem {
 	
 	@Override
 	public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+		boolean success = true;
+
 		if (tier.equals(CrazyTiers.METEORITE)) {
 			target.setFire(8);
 		}
+		else if (tier.equals(CrazyTiers.INVISIUM)) {
+			final int initDuration = 100;
+			InvisiumEffectInstance effect = new InvisiumEffectInstance(initDuration, 5);
+			success = target.addPotionEffect(effect);
+		}
 
-		return super.hitEntity(stack, target, attacker);
+		return success && super.hitEntity(stack, target, attacker);
 	}
 
 	public ActionResultType onItemUse(ItemUseContext context) {

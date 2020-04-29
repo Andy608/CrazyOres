@@ -41,7 +41,7 @@ public class ZectiumCoreDispense extends ProjectileDispenseBehavior {
         // so that the Core is shot and rebounds into dispenser. This is only way for us to blow up the
         // dispenser, believe me, I've tried everything else...
         iprojectile.shoot((double)direction.getXOffset(), (double)((float)direction.getYOffset() + 0.1F), (double)direction.getZOffset(), -1F, 0.0F);
-        
+
         world.addEntity((Entity)iprojectile);
         stack.shrink(1);
         return stack;
