@@ -24,22 +24,27 @@ public class CoreArmor extends ArmorItem {
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player)
     {
         final int INVISIBILITY_DURATION = 2;
-        if (isWearingHelmet(player, CoreItems.INVISIUM_HELMET.get())
-                && isWearingChestplate(player, CoreItems.INVISIUM_CHESTPLATE.get())
-                && isWearingLeggings(player, CoreItems.INVISIUM_LEGGINGS.get())
-                && isWearingBoots(player, CoreItems.INVISIUM_BOOTS.get())) {
+        if (isWearingFullInvisiumSuit(player)) {
             if (player.getActivePotionEffect(Effects.INVISIBILITY) == null
                     || player.getActivePotionEffect(Effects.INVISIBILITY).getDuration() < INVISIBILITY_DURATION) {
                 player.addPotionEffect(new EffectInstance(Effects.INVISIBILITY, INVISIBILITY_DURATION, 0,
                         false, false));
-                if (world.getDayTime() % 20 == 0) {
-                    this.damageItem(stack, 1, player, (p_214023_1_) -> {
-                        p_214023_1_.sendBreakAnimation(EquipmentSlotType.func_220318_a(EquipmentSlotType.Group.ARMOR,
-                                this.getEquipmentSlot().getIndex()));
-                    });
-                }
+            }
+
+            if (world.getDayTime() % 100 == 0) {
+                stack.damageItem(1, player, (entity) -> {
+                    entity.sendBreakAnimation(EquipmentSlotType.func_220318_a(EquipmentSlotType.Group.ARMOR,
+                            stack.getEquipmentSlot().getIndex()));
+                });
             }
         }
+    }
+
+    public static boolean isWearingFullInvisiumSuit(PlayerEntity player) {
+        return isWearingHelmet(player, CoreItems.INVISIUM_HELMET.get())
+                && isWearingChestplate(player, CoreItems.INVISIUM_CHESTPLATE.get())
+                && isWearingLeggings(player, CoreItems.INVISIUM_LEGGINGS.get())
+                && isWearingBoots(player, CoreItems.INVISIUM_BOOTS.get());
     }
 
     public static boolean isWearingHelmet(PlayerEntity player, Item helmet) {

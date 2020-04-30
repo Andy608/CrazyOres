@@ -22,8 +22,7 @@ public class InvisiumAntiTargetEvent {
                     && CoreArmor.isWearingChestplate(player, CoreItems.INVISIUM_CHESTPLATE.get())
                     && CoreArmor.isWearingLeggings(player, CoreItems.INVISIUM_LEGGINGS.get())
                     && CoreArmor.isWearingBoots(player, CoreItems.INVISIUM_BOOTS.get())
-                    && player.getHeldItemMainhand() == new ItemStack(null)
-                    && player.getHeldItemOffhand() == new ItemStack(null)) {
+                    && player.getHeldItemMainhand().isEmpty() && player.getHeldItemOffhand().isEmpty()) {
                 MobEntity mob = (MobEntity) event.getEntityLiving();
                 mob.setAttackTarget(null);
             }
