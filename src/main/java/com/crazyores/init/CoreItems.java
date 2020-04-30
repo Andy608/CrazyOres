@@ -3,18 +3,11 @@ package com.crazyores.init;
 import com.crazyores.CrazyOres;
 import com.crazyores.init.registration.CoreRegistryObject;
 import com.crazyores.init.registration.ItemDeferredRegister;
-import com.crazyores.item.CopperBucket;
-import com.crazyores.item.CopperMilkBucket;
-import com.crazyores.item.CoreAxe;
-import com.crazyores.item.CoreHoe;
-import com.crazyores.item.CorePickaxe;
-import com.crazyores.item.CoreShovel;
-import com.crazyores.item.CoreSledgehammer;
-import com.crazyores.item.CoreSword;
-import com.crazyores.item.CrazyTiers;
-import com.crazyores.item.ZectiumCoreItem;
+import com.crazyores.item.*;
 
 import net.minecraft.fluid.Fluids;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 
 public class CoreItems {
@@ -190,64 +183,64 @@ public class CoreItems {
 					ItemDeferredRegister.getBaseProps().containerItem(COPPER_BUCKET_EMPTY.get()).maxStackSize(1)));
 	public static final CoreRegistryObject<CopperMilkBucket> COPPER_BUCKET_MILK = ITEMS.register("copper_bucket_milk", CopperMilkBucket::new);
 	
-//	/** Helmet List **/
-//
-//	public static final CoreRegistryObject<Item> COPPER_HELMET = ITEMS.register("copper_helmet");
-//	public static final CoreRegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet");
-//	public static final CoreRegistryObject<Item> ADAMITE_HELMET = ITEMS.register("adamite_helmet");
-//	public static final CoreRegistryObject<Item> METEORITE_HELMET = ITEMS.register("meteorite_helmet");
-//	public static final CoreRegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet");
-//	public static final CoreRegistryObject<Item> ZECTIUM_HELMET = ITEMS.register("zectium_helmet");
-//	public static final CoreRegistryObject<Item> TAPAZITE_HELMET = ITEMS.register("tapazite_helmet");
-//	public static final CoreRegistryObject<Item> OSMONIUM_HELMET = ITEMS.register("osmonium_helmet");
-//	public static final CoreRegistryObject<Item> STARCONIUM_HELMET = ITEMS.register("starconium_helmet");
-//	public static final CoreRegistryObject<Item> INVISIUM_HELMET = ITEMS.register("invisium_helmet");
-//	public static final CoreRegistryObject<Item> ENDER_HELMET = ITEMS.register("ender_helmet");
-//
-//	
-//	/** Chestplate List **/
-//
-//	public static final CoreRegistryObject<Item> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate");
-//	public static final CoreRegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate");
-//	public static final CoreRegistryObject<Item> ADAMITE_CHESTPLATE = ITEMS.register("adamite_chestplate");
-//	public static final CoreRegistryObject<Item> METEORITE_CHESTPLATE = ITEMS.register("meteorite_chestplate");
-//	public static final CoreRegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate");
-//	public static final CoreRegistryObject<Item> ZECTIUM_CHESTPLATE = ITEMS.register("zectium_chestplate");
-//	public static final CoreRegistryObject<Item> TAPAZITE_CHESTPLATE = ITEMS.register("tapazite_chestplate");
-//	public static final CoreRegistryObject<Item> OSMONIUM_CHESTPLATE = ITEMS.register("osmonium_chestplate");
-//	public static final CoreRegistryObject<Item> STARCONIUM_CHESTPLATE = ITEMS.register("starconium_chestplate");
-//	public static final CoreRegistryObject<Item> INVISIUM_CHESTPLATE = ITEMS.register("invisium_chestplate");
-//	public static final CoreRegistryObject<Item> ENDER_CHESTPLATE = ITEMS.register("ender_chestplate");
-//
-//	
-//	/** Legging List **/
-//
-//	public static final CoreRegistryObject<Item> COPPER_LEGGINGS = ITEMS.register("copper_leggings");
-//	public static final CoreRegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings");
-//	public static final CoreRegistryObject<Item> ADAMITE_LEGGINGS = ITEMS.register("adamite_leggings");
-//	public static final CoreRegistryObject<Item> METEORITE_LEGGINGS = ITEMS.register("meteorite_leggings");
-//	public static final CoreRegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings");
-//	public static final CoreRegistryObject<Item> ZECTIUM_LEGGINGS = ITEMS.register("zectium_leggings");
-//	public static final CoreRegistryObject<Item> TAPAZITE_LEGGINGS = ITEMS.register("tapazite_leggings");
-//	public static final CoreRegistryObject<Item> OSMONIUM_LEGGINGS = ITEMS.register("osmonium_leggings");
-//	public static final CoreRegistryObject<Item> STARCONIUM_LEGGINGS = ITEMS.register("starconium_leggings");
-//	public static final CoreRegistryObject<Item> INVISIUM_LEGGINGS = ITEMS.register("invisium_leggings");
-//	public static final CoreRegistryObject<Item> ENDER_LEGGINGS = ITEMS.register("ender_leggings");
-//
-//	
-//	/** Boot List **/
-//
-//	public static final CoreRegistryObject<Item> COPPER_BOOTS = ITEMS.register("copper_boots");	
-//	public static final CoreRegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots");
-//	public static final CoreRegistryObject<Item> ADAMITE_BOOTS = ITEMS.register("adamite_boots");
-//	public static final CoreRegistryObject<Item> METEORITE_BOOTS = ITEMS.register("meteorite_boots");
-//	public static final CoreRegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots");
-//	public static final CoreRegistryObject<Item> ZECTIUM_BOOTS = ITEMS.register("zectium_boots");
-//	public static final CoreRegistryObject<Item> TAPAZITE_BOOTS = ITEMS.register("tapazite_boots");
-//	public static final CoreRegistryObject<Item> OSMONIUM_BOOTS = ITEMS.register("osmonium_boots");
-//	public static final CoreRegistryObject<Item> STARCONIUM_BOOTS = ITEMS.register("starconium_boots");
-//	public static final CoreRegistryObject<Item> INVISIUM_BOOTS = ITEMS.register("invisium_boots");
-//	public static final CoreRegistryObject<Item> ENDER_BOOTS = ITEMS.register("ender_boots");
+	/** Helmet List **/
+
+	public static final CoreRegistryObject<Item> COPPER_HELMET = ITEMS.register("copper_helmet", () -> new CoreArmor(CrazyArmorMaterial.COPPER, EquipmentSlotType.HEAD));
+	public static final CoreRegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", () -> new CoreArmor(CrazyArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD));
+	public static final CoreRegistryObject<Item> ADAMITE_HELMET = ITEMS.register("adamite_helmet", () -> new CoreArmor(CrazyArmorMaterial.ADAMITE, EquipmentSlotType.HEAD));
+	public static final CoreRegistryObject<Item> METEORITE_HELMET = ITEMS.register("meteorite_helmet", () -> new CoreArmor(CrazyArmorMaterial.METEORITE, EquipmentSlotType.HEAD));
+	public static final CoreRegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet", () -> new CoreArmor(CrazyArmorMaterial.RUBY, EquipmentSlotType.HEAD));
+	public static final CoreRegistryObject<Item> ZECTIUM_HELMET = ITEMS.register("zectium_helmet", () -> new CoreArmor(CrazyArmorMaterial.ZECTIUM, EquipmentSlotType.HEAD));
+	public static final CoreRegistryObject<Item> TAPAZITE_HELMET = ITEMS.register("tapazite_helmet", () -> new CoreArmor(CrazyArmorMaterial.TAPAZITE, EquipmentSlotType.HEAD));
+	public static final CoreRegistryObject<Item> OSMONIUM_HELMET = ITEMS.register("osmonium_helmet", () -> new CoreArmor(CrazyArmorMaterial.OSMONIUM, EquipmentSlotType.HEAD));
+	public static final CoreRegistryObject<Item> STARCONIUM_HELMET = ITEMS.register("starconium_helmet", () -> new CoreArmor(CrazyArmorMaterial.STARCONIUM, EquipmentSlotType.HEAD));
+	public static final CoreRegistryObject<Item> INVISIUM_HELMET = ITEMS.register("invisium_helmet", () -> new CoreArmor(CrazyArmorMaterial.INVISIUM, EquipmentSlotType.HEAD));
+	public static final CoreRegistryObject<Item> ENDER_HELMET = ITEMS.register("ender_helmet", () -> new CoreArmor(CrazyArmorMaterial.ENDER, EquipmentSlotType.HEAD));
+
+
+	/** Chestplate List **/
+
+	public static final CoreRegistryObject<Item> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () -> new CoreArmor(CrazyArmorMaterial.COPPER, EquipmentSlotType.CHEST));
+	public static final CoreRegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", () -> new CoreArmor(CrazyArmorMaterial.SAPPHIRE, EquipmentSlotType.CHEST));
+	public static final CoreRegistryObject<Item> ADAMITE_CHESTPLATE = ITEMS.register("adamite_chestplate", () -> new CoreArmor(CrazyArmorMaterial.ADAMITE, EquipmentSlotType.CHEST));
+	public static final CoreRegistryObject<Item> METEORITE_CHESTPLATE = ITEMS.register("meteorite_chestplate", () -> new CoreArmor(CrazyArmorMaterial.METEORITE, EquipmentSlotType.CHEST));
+	public static final CoreRegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () -> new CoreArmor(CrazyArmorMaterial.RUBY, EquipmentSlotType.CHEST));
+	public static final CoreRegistryObject<Item> ZECTIUM_CHESTPLATE = ITEMS.register("zectium_chestplate", () -> new CoreArmor(CrazyArmorMaterial.ZECTIUM, EquipmentSlotType.CHEST));
+	public static final CoreRegistryObject<Item> TAPAZITE_CHESTPLATE = ITEMS.register("tapazite_chestplate", () -> new CoreArmor(CrazyArmorMaterial.TAPAZITE, EquipmentSlotType.CHEST));
+	public static final CoreRegistryObject<Item> OSMONIUM_CHESTPLATE = ITEMS.register("osmonium_chestplate", () -> new CoreArmor(CrazyArmorMaterial.OSMONIUM, EquipmentSlotType.CHEST));
+	public static final CoreRegistryObject<Item> STARCONIUM_CHESTPLATE = ITEMS.register("starconium_chestplate", () -> new CoreArmor(CrazyArmorMaterial.STARCONIUM, EquipmentSlotType.CHEST));
+	public static final CoreRegistryObject<Item> INVISIUM_CHESTPLATE = ITEMS.register("invisium_chestplate", () -> new CoreArmor(CrazyArmorMaterial.INVISIUM, EquipmentSlotType.CHEST));
+	public static final CoreRegistryObject<Item> ENDER_CHESTPLATE = ITEMS.register("ender_chestplate", () -> new CoreArmor(CrazyArmorMaterial.ENDER, EquipmentSlotType.CHEST));
+
+
+	/** Legging List **/
+
+	public static final CoreRegistryObject<Item> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () -> new CoreArmor(CrazyArmorMaterial.COPPER, EquipmentSlotType.LEGS));
+	public static final CoreRegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", () -> new CoreArmor(CrazyArmorMaterial.SAPPHIRE, EquipmentSlotType.LEGS));
+	public static final CoreRegistryObject<Item> ADAMITE_LEGGINGS = ITEMS.register("adamite_leggings", () -> new CoreArmor(CrazyArmorMaterial.ADAMITE, EquipmentSlotType.LEGS));
+	public static final CoreRegistryObject<Item> METEORITE_LEGGINGS = ITEMS.register("meteorite_leggings", () -> new CoreArmor(CrazyArmorMaterial.METEORITE, EquipmentSlotType.LEGS));
+	public static final CoreRegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () -> new CoreArmor(CrazyArmorMaterial.RUBY, EquipmentSlotType.LEGS));
+	public static final CoreRegistryObject<Item> ZECTIUM_LEGGINGS = ITEMS.register("zectium_leggings", () -> new CoreArmor(CrazyArmorMaterial.ZECTIUM, EquipmentSlotType.LEGS));
+	public static final CoreRegistryObject<Item> TAPAZITE_LEGGINGS = ITEMS.register("tapazite_leggings", () -> new CoreArmor(CrazyArmorMaterial.TAPAZITE, EquipmentSlotType.LEGS));
+	public static final CoreRegistryObject<Item> OSMONIUM_LEGGINGS = ITEMS.register("osmonium_leggings", () -> new CoreArmor(CrazyArmorMaterial.OSMONIUM, EquipmentSlotType.LEGS));
+	public static final CoreRegistryObject<Item> STARCONIUM_LEGGINGS = ITEMS.register("starconium_leggings", () -> new CoreArmor(CrazyArmorMaterial.STARCONIUM, EquipmentSlotType.LEGS));
+	public static final CoreRegistryObject<Item> INVISIUM_LEGGINGS = ITEMS.register("invisium_leggings", () -> new CoreArmor(CrazyArmorMaterial.INVISIUM, EquipmentSlotType.LEGS));
+	public static final CoreRegistryObject<Item> ENDER_LEGGINGS = ITEMS.register("ender_leggings", () -> new CoreArmor(CrazyArmorMaterial.ENDER, EquipmentSlotType.LEGS));
+
+
+	/** Boot List **/
+
+	public static final CoreRegistryObject<Item> COPPER_BOOTS = ITEMS.register("copper_boots", () -> new CoreArmor(CrazyArmorMaterial.COPPER, EquipmentSlotType.FEET));
+	public static final CoreRegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", () -> new CoreArmor(CrazyArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET));
+	public static final CoreRegistryObject<Item> ADAMITE_BOOTS = ITEMS.register("adamite_boots", () -> new CoreArmor(CrazyArmorMaterial.ADAMITE, EquipmentSlotType.FEET));
+	public static final CoreRegistryObject<Item> METEORITE_BOOTS = ITEMS.register("meteorite_boots", () -> new CoreArmor(CrazyArmorMaterial.METEORITE, EquipmentSlotType.FEET));
+	public static final CoreRegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots", () -> new CoreArmor(CrazyArmorMaterial.RUBY, EquipmentSlotType.FEET));
+	public static final CoreRegistryObject<Item> ZECTIUM_BOOTS = ITEMS.register("zectium_boots", () -> new CoreArmor(CrazyArmorMaterial.ZECTIUM, EquipmentSlotType.FEET));
+	public static final CoreRegistryObject<Item> TAPAZITE_BOOTS = ITEMS.register("tapazite_boots", () -> new CoreArmor(CrazyArmorMaterial.TAPAZITE, EquipmentSlotType.FEET));
+	public static final CoreRegistryObject<Item> OSMONIUM_BOOTS = ITEMS.register("osmonium_boots", () -> new CoreArmor(CrazyArmorMaterial.OSMONIUM, EquipmentSlotType.FEET));
+	public static final CoreRegistryObject<Item> STARCONIUM_BOOTS = ITEMS.register("starconium_boots", () -> new CoreArmor(CrazyArmorMaterial.STARCONIUM, EquipmentSlotType.FEET));
+	public static final CoreRegistryObject<Item> INVISIUM_BOOTS = ITEMS.register("invisium_boots", () -> new CoreArmor(CrazyArmorMaterial.INVISIUM, EquipmentSlotType.FEET));
+	public static final CoreRegistryObject<Item> ENDER_BOOTS = ITEMS.register("ender_boots", () -> new CoreArmor(CrazyArmorMaterial.ENDER, EquipmentSlotType.FEET));
 //
 //	//Cake!
 //	public static final CoreRegistryObject<Item> CHOCOLATE_CAKE = ITEMS.register("chocolate_cake");

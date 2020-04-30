@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 
 public class CrazyItemGroups {
 	
-	public static final ItemGroup CO_ITEMS_ITEM_GROUP = new ModItemGroup(CrazyOres.MODID, () -> new ItemStack(CoreItems.ZECTIUM_CORE.get()));
+	public static final ItemGroup CRAZYORES_ITEM_GROUP = new ModItemGroup(CrazyOres.MODID, () -> new ItemStack(CoreItems.STARCONIUM_SLEDGEHAMMER.get()));
 	
 	public static class ModItemGroup extends ItemGroup {
 		

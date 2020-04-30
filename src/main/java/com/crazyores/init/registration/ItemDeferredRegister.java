@@ -19,7 +19,7 @@ public class ItemDeferredRegister extends CoreDeferredRegister<Item> {
 	}
 	
 	public static Item.Properties getBaseProps() {
-		return new Item.Properties().group(CrazyItemGroups.CO_ITEMS_ITEM_GROUP);
+		return new Item.Properties().group(CrazyItemGroups.CRAZYORES_ITEM_GROUP);
 	}
 	
 	public CoreRegistryObject<Item> register(String name) {
