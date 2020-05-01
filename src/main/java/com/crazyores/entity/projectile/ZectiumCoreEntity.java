@@ -16,6 +16,8 @@ import net.minecraftforge.fml.network.NetworkHooks;
 
 public class ZectiumCoreEntity extends ProjectileItemEntity {
 
+//	private int impacts = 0;
+
 	public ZectiumCoreEntity(EntityType<? extends ZectiumCoreEntity> type, World world) {
 		super(type, world);
 	}
@@ -37,13 +39,17 @@ public class ZectiumCoreEntity extends ProjectileItemEntity {
 	protected void onImpact(RayTraceResult result) {
 		if (!this.world.isRemote) {
 			Vec3d pos = result.getHitVec();
-			
-			//if (COConfigSettings.zectiumCoreExplodes) {
-			this.world.createExplosion(this, pos.x, pos.y, pos.z, 4f, Explosion.Mode.BREAK);
-			//}
-			
+
 			this.world.setEntityState(this, (byte)3);
-	        this.remove();
+//			impacts++;
+//			if (impacts >= 5) {
+			this.remove();
+//			}
+
+			//if (COConfigSettings.zectiumCoreExplodes) {
+			this.world.createExplosion(this, pos.x, pos.y, pos.z, /*20F*/4F,
+					Explosion.Mode.BREAK);
+			//}
 		}
 	}
 	

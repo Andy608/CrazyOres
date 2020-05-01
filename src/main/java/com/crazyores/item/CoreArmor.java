@@ -3,6 +3,7 @@ package com.crazyores.item;
 import com.crazyores.CrazyOres;
 import com.crazyores.init.CoreItems;
 import com.crazyores.init.registration.ItemDeferredRegister;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -23,43 +24,123 @@ public class CoreArmor extends ArmorItem {
     @Override
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player)
     {
-        final int INVISIBILITY_DURATION = 2;
+        final int REAPPLY_DURATION = 2;
         if (isWearingFullInvisiumSuit(player)) {
             if (player.getActivePotionEffect(Effects.INVISIBILITY) == null
-                    || player.getActivePotionEffect(Effects.INVISIBILITY).getDuration() < INVISIBILITY_DURATION) {
-                player.addPotionEffect(new EffectInstance(Effects.INVISIBILITY, INVISIBILITY_DURATION, 0,
+                    || player.getActivePotionEffect(Effects.INVISIBILITY).getDuration() < REAPPLY_DURATION) {
+                player.addPotionEffect(new EffectInstance(Effects.INVISIBILITY, REAPPLY_DURATION, 0,
                         false, false));
             }
 
-            if (world.getDayTime() % 100 == 0) {
-                stack.damageItem(1, player, (entity) -> {
-                    entity.sendBreakAnimation(EquipmentSlotType.func_220318_a(EquipmentSlotType.Group.ARMOR,
-                            stack.getEquipmentSlot().getIndex()));
+            if (world.getRandom().nextInt(100) == 0) {
+                stack.damageItem(1, player, (e) -> {
+                    e.sendBreakAnimation(((ArmorItem)stack.getItem()).getEquipmentSlot());
+                });
+            }
+        }
+        else if (isWearingFullAdamiteSuit(player) && !player.abilities.isCreativeMode) {
+            if (player.getActivePotionEffect(Effects.WATER_BREATHING) == null
+                    || player.getActivePotionEffect(Effects.WATER_BREATHING).getDuration() < REAPPLY_DURATION) {
+                player.addPotionEffect(new EffectInstance(Effects.WATER_BREATHING, REAPPLY_DURATION, 0,
+                        false, false));
+            }
+
+            if (player.canSwim() && world.getRandom().nextInt(50) == 0) {
+                stack.damageItem(1, player, (e) -> {
+                    e.sendBreakAnimation(((ArmorItem)stack.getItem()).getEquipmentSlot());
+                });
+            }
+        }
+        else if (isWearingFullZectiumSuit(player) && !player.abilities.isCreativeMode) {
+            if (player.getActivePotionEffect(Effects.SLOWNESS) == null
+                    || player.getActivePotionEffect(Effects.SLOWNESS).getDuration() < REAPPLY_DURATION) {
+                player.addPotionEffect(new EffectInstance(Effects.SLOWNESS, REAPPLY_DURATION, 0,
+                        false, false));
+            }
+        }
+        else if (isWearingFullMeteoriteSuit(player)) {
+            if (player.getActivePotionEffect(Effects.FIRE_RESISTANCE) == null
+                    || player.getActivePotionEffect(Effects.FIRE_RESISTANCE).getDuration() < REAPPLY_DURATION) {
+                player.addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, REAPPLY_DURATION, 0,
+                        false, false));
+            }
+
+            if ((player.isInLava() || player.isBurning()) && world.getRandom().nextInt(1000) == 0) {
+                stack.damageItem(1, player, (e) -> {
+                    e.sendBreakAnimation(((ArmorItem)stack.getItem()).getEquipmentSlot());
+                });
+            }
+        }
+        else if (isWearingFullOsmoniumSuit(player)) {
+            if (player.getActivePotionEffect(Effects.SPEED) == null
+                    || player.getActivePotionEffect(Effects.SPEED).getDuration() < REAPPLY_DURATION) {
+                player.addPotionEffect(new EffectInstance(Effects.SPEED, REAPPLY_DURATION, 0,
+                        false, false));
+            }
+
+            if (!player.isSwimming() && player.isSprinting() && world.getRandom().nextInt(100) == 0) {
+                stack.damageItem(1, player, (e) -> {
+                    e.sendBreakAnimation(((ArmorItem)stack.getItem()).getEquipmentSlot());
                 });
             }
         }
     }
 
-    public static boolean isWearingFullInvisiumSuit(PlayerEntity player) {
-        return isWearingHelmet(player, CoreItems.INVISIUM_HELMET.get())
-                && isWearingChestplate(player, CoreItems.INVISIUM_CHESTPLATE.get())
-                && isWearingLeggings(player, CoreItems.INVISIUM_LEGGINGS.get())
-                && isWearingBoots(player, CoreItems.INVISIUM_BOOTS.get());
+    public static boolean isWearingFullInvisiumSuit(LivingEntity entity) {
+        return isWearingHelmet(entity, CoreItems.INVISIUM_HELMET.get())
+                && isWearingChestplate(entity, CoreItems.INVISIUM_CHESTPLATE.get())
+                && isWearingLeggings(entity, CoreItems.INVISIUM_LEGGINGS.get())
+                && isWearingBoots(entity, CoreItems.INVISIUM_BOOTS.get());
     }
 
-    public static boolean isWearingHelmet(PlayerEntity player, Item helmet) {
-        return player.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem().equals(helmet);
+    public static boolean isWearingFullAdamiteSuit(LivingEntity entity) {
+        return isWearingHelmet(entity, CoreItems.ADAMITE_HELMET.get())
+                && isWearingChestplate(entity, CoreItems.ADAMITE_CHESTPLATE.get())
+                && isWearingLeggings(entity, CoreItems.ADAMITE_LEGGINGS.get())
+                && isWearingBoots(entity, CoreItems.ADAMITE_BOOTS.get());
     }
 
-    public static boolean isWearingChestplate(PlayerEntity player, Item chestplate) {
-        return player.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem().equals(chestplate);
+    public static boolean isWearingFullZectiumSuit(LivingEntity entity) {
+        return isWearingHelmet(entity, CoreItems.ZECTIUM_HELMET.get())
+                && isWearingChestplate(entity, CoreItems.ZECTIUM_CHESTPLATE.get())
+                && isWearingLeggings(entity, CoreItems.ZECTIUM_LEGGINGS.get())
+                && isWearingBoots(entity, CoreItems.ZECTIUM_BOOTS.get());
     }
 
-    public static boolean isWearingLeggings(PlayerEntity player, Item leggings) {
-        return player.getItemStackFromSlot(EquipmentSlotType.LEGS).getItem().equals(leggings);
+    public static boolean isWearingFullMeteoriteSuit(LivingEntity entity) {
+        return isWearingHelmet(entity, CoreItems.METEORITE_HELMET.get())
+                && isWearingChestplate(entity, CoreItems.METEORITE_CHESTPLATE.get())
+                && isWearingLeggings(entity, CoreItems.METEORITE_LEGGINGS.get())
+                && isWearingBoots(entity, CoreItems.METEORITE_BOOTS.get());
     }
 
-    public static boolean isWearingBoots(PlayerEntity player, Item boots) {
-        return player.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(boots);
+    public static boolean isWearingFullEnderSuit(LivingEntity entity) {
+        return isWearingHelmet(entity, CoreItems.ENDER_HELMET.get())
+                && isWearingChestplate(entity, CoreItems.ENDER_CHESTPLATE.get())
+                && isWearingLeggings(entity, CoreItems.ENDER_LEGGINGS.get())
+                && isWearingBoots(entity, CoreItems.ENDER_BOOTS.get());
+    }
+
+    public static boolean isWearingFullOsmoniumSuit(LivingEntity entity) {
+        return isWearingHelmet(entity, CoreItems.OSMONIUM_HELMET.get())
+                && isWearingChestplate(entity, CoreItems.OSMONIUM_CHESTPLATE.get())
+                && isWearingLeggings(entity, CoreItems.OSMONIUM_LEGGINGS.get())
+                && isWearingBoots(entity, CoreItems.OSMONIUM_BOOTS.get());
+    }
+
+    public static boolean isWearingHelmet(LivingEntity entity, Item helmet) {
+        return entity.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem().equals(helmet);
+    }
+
+    public static boolean isWearingChestplate(LivingEntity entity, Item chestplate) {
+        return entity.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem().equals(chestplate);
+    }
+
+    public static boolean isWearingLeggings(LivingEntity entity, Item leggings) {
+        return entity.getItemStackFromSlot(EquipmentSlotType.LEGS).getItem().equals(leggings);
+    }
+
+    public static boolean isWearingBoots(LivingEntity entity, Item boots) {
+        return entity.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(boots);
     }
 }
