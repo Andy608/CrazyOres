@@ -11,6 +11,7 @@ import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.*;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.CowEntity;
+import net.minecraft.entity.passive.MooshroomEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.fluid.Fluid;
@@ -169,13 +170,18 @@ public class CopperBucket extends BucketItem {
 		if (this.containedBlock == Fluids.EMPTY && target instanceof CowEntity) {
 			CowEntity cow = (CowEntity) target;
 			if (!player.abilities.isCreativeMode && !cow.isChild()) {
+				Item milk = CoreItems.COPPER_BUCKET_MILK.get();
+				if (cow instanceof MooshroomEntity
+						&& ((MooshroomEntity)cow).getMooshroomType() == MooshroomEntity.Type.BROWN) {
+					milk = CoreItems.CHOCOLATE_MILK.get();
+				}
 				player.playSound(SoundEvents.ENTITY_COW_MILK, 1.0F, 1.0F);
 				stack.shrink(1);
 				if (stack.isEmpty()) {
-					player.setHeldItem(hand, new ItemStack(CoreItems.COPPER_BUCKET_MILK.get()));
+					player.setHeldItem(hand, new ItemStack(milk));
 				}
-				else if (!player.inventory.addItemStackToInventory(new ItemStack(CoreItems.COPPER_BUCKET_MILK.get()))) {
-					player.dropItem(new ItemStack(CoreItems.COPPER_BUCKET_MILK.get()), false);
+				else if (!player.inventory.addItemStackToInventory(new ItemStack(milk))) {
+					player.dropItem(new ItemStack(milk), false);
 				}
 			}
 		}
