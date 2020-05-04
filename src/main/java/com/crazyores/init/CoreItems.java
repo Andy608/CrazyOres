@@ -170,18 +170,26 @@ public class CoreItems {
 	/** Hammer List **/
 
 	public static final CoreRegistryObject<CoreSledgehammer> STARCONIUM_SLEDGEHAMMER = ITEMS
-			.register("starconium_sledgehammer", () -> new CoreSledgehammer(3, -3.2F, CrazyTiers.STARCONIUM_HAMMER));
+			.register("starconium_sledgehammer", () -> new CoreSledgehammer(3, -3.2F,
+					CrazyTiers.STARCONIUM_HAMMER));
 
 	/** Bucket List **/
-	public static final CoreRegistryObject<CopperBucket> COPPER_BUCKET_EMPTY = ITEMS.register("copper_bucket_empty",
+	public static final CoreRegistryObject<CopperBucket> COPPER_BUCKET_EMPTY =
+			ITEMS.register("copper_bucket_empty",
 			() -> new CopperBucket(Fluids.EMPTY.delegate, ItemDeferredRegister.getBaseProps().maxStackSize(32)));
-	public static final CoreRegistryObject<CopperBucket> COPPER_BUCKET_WATER = ITEMS.register("copper_bucket_water",
+	public static final CoreRegistryObject<CopperBucket> COPPER_BUCKET_WATER =
+			ITEMS.register("copper_bucket_water",
 			() -> new CopperBucket(Fluids.WATER.delegate,
 					ItemDeferredRegister.getBaseProps().containerItem(COPPER_BUCKET_EMPTY.get()).maxStackSize(1)));
 	public static final CoreRegistryObject<CopperBucket> COPPER_BUCKET_LAVA = ITEMS.register("copper_bucket_lava",
 			() -> new CopperBucket(Fluids.LAVA.delegate,
 					ItemDeferredRegister.getBaseProps().containerItem(COPPER_BUCKET_EMPTY.get()).maxStackSize(1)));
-	public static final CoreRegistryObject<CopperMilkBucket> COPPER_BUCKET_MILK = ITEMS.register("copper_bucket_milk", CopperMilkBucket::new);
+	public static final CoreRegistryObject<CopperMilkBucket> COPPER_BUCKET_MILK =
+			ITEMS.register("copper_bucket_milk", () -> new CopperMilkBucket());
+	public static final CoreRegistryObject<CopperMilkBucket> CHOCOLATE_MILK = ITEMS.register("chocolate_milk",
+			() -> new CopperMilkBucket(CoreFoods.CHOCOLATE_MILK));
+	public static final CoreRegistryObject<CopperMilkBucket> HOT_CHOCOLATE = ITEMS.register("hot_chocolate",
+			() -> new CopperMilkBucket(CoreFoods.HOT_CHOCOLATE));
 	
 	/** Helmet List **/
 
@@ -251,7 +259,7 @@ public class CoreItems {
 //	public static final CoreRegistryObject<Item> ZECTIUM_PROTECTOR_EGG = ITEMS.register("zectium_protector_egg");
 //	public static final CoreRegistryObject<Item> GREAT_WHITE_SHARK_EGG = ITEMS.register("great_white_shark_egg");
 //	public static final CoreRegistryObject<Item> ADAMITE_SHARK_EGG = ITEMS.register("adamite_shark_egg");
-//	
+//
 //	/** Bow List **/
 //
 //	public static final CoreRegistryObject<Item> SWIFT_BOW = ITEMS.register("swift_bow");
