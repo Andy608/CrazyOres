@@ -1,0 +1,27 @@
+{
+     "parent": "item/bow",
+     "textures": {
+         "layer0": "crazyores:item/swift_bow"
+     },
+     "overrides": [
+     {
+         "predicate": {
+             "pulling": 1
+         },
+         "model": "crazyores:item/swift_bow_pulling_0"
+     },
+     {
+         "predicate": {
+             "pulling": 1,
+             "pull": 0.65
+         },
+         "model": "crazyores:item/swift_bow_pulling_1"
+     },
+     {
+         "predicate": {
+             "pulling": 1,
+             "pull": 0.9
+         },
+         "model": "crazyores:item/swift_bow_pulling_2"
+     }]
+}

@@ -259,27 +259,30 @@ public class CoreItems {
 //	public static final CoreRegistryObject<Item> ZECTIUM_PROTECTOR_EGG = ITEMS.register("zectium_protector_egg");
 //	public static final CoreRegistryObject<Item> GREAT_WHITE_SHARK_EGG = ITEMS.register("great_white_shark_egg");
 //	public static final CoreRegistryObject<Item> ADAMITE_SHARK_EGG = ITEMS.register("adamite_shark_egg");
+
+	/** Bow List **/
+
+	public static final CoreRegistryObject<Item> SWIFT_BOW = ITEMS.register("swift_bow",
+			() -> new SwiftBow(ItemDeferredRegister.getBaseProps().maxDamage(2271)));
+	public static final CoreRegistryObject<Item> HELL_BOW = ITEMS.register("hell_bow");
+	public static final CoreRegistryObject<Item> DUAL_SHOT_BOW = ITEMS.register("dual_shot_bow");
+	public static final CoreRegistryObject<Item> CONFUSION_BOW = ITEMS.register("confusion_bow");
+
+	//TODO: REMOVE ALL ARROWS AND ARROW HEADS!
+
+//	/** Arrow List **/
 //
-//	/** Bow List **/
+//	public static final CoreRegistryObject<Item> FLAMING_ARROW = ITEMS.register("flaming_arrow");
+//	public static final CoreRegistryObject<Item> EXPLOSIVE_ARROW = ITEMS.register("explosive_arrow");
+//	public static final CoreRegistryObject<Item> FREEZING_ARROW = ITEMS.register("frozen_arrow");
+//	public static final CoreRegistryObject<Item> LIGHTNING_ARROW = ITEMS.register("lightning_arrow");
 //
-//	public static final CoreRegistryObject<Item> SWIFT_BOW = ITEMS.register("swift_bow");
-//	public static final CoreRegistryObject<Item> HELL_BOW = ITEMS.register("hell_bow");
-//	public static final CoreRegistryObject<Item> DUAL_SHOT_BOW = ITEMS.register("dual_shot_bow");
-//	public static final CoreRegistryObject<Item> CONFUSION_BOW = ITEMS.register("confusion_bow");
-
-	/** Arrow List **/
-
-	public static final CoreRegistryObject<Item> FLAMING_ARROW = ITEMS.register("flaming_arrow");
-	public static final CoreRegistryObject<Item> EXPLOSIVE_ARROW = ITEMS.register("explosive_arrow");
-	public static final CoreRegistryObject<Item> FREEZING_ARROW = ITEMS.register("frozen_arrow");
-	public static final CoreRegistryObject<Item> LIGHTNING_ARROW = ITEMS.register("lightning_arrow");
-
-	/** Arrow_Head List **/
-
-	public static final CoreRegistryObject<Item> FLAMING_ARROW_HEAD = ITEMS.register("flaming_arrow_head");
-	public static final CoreRegistryObject<Item> EXPLOSIVE_ARROW_HEAD = ITEMS.register("explosive_arrow_head");
-	public static final CoreRegistryObject<Item> FROZEN_ARROW_HEAD = ITEMS.register("frozen_arrow_head");
-	public static final CoreRegistryObject<Item> LIGHTNING_ARROW_HEAD = ITEMS.register("lightning_arrow_head");
+//	/** Arrow_Head List **/
+//
+//	public static final CoreRegistryObject<Item> FLAMING_ARROW_HEAD = ITEMS.register("flaming_arrow_head");
+//	public static final CoreRegistryObject<Item> EXPLOSIVE_ARROW_HEAD = ITEMS.register("explosive_arrow_head");
+//	public static final CoreRegistryObject<Item> FROZEN_ARROW_HEAD = ITEMS.register("frozen_arrow_head");
+//	public static final CoreRegistryObject<Item> LIGHTNING_ARROW_HEAD = ITEMS.register("lightning_arrow_head");
 
 //	public static final CoreRegistryObject<Item> RAW_SHARK_MEAT = ITEMS.register("raw_shark_meat");
 //	public static final CoreRegistryObject<Item> COOKED_SHARK_MEAT = ITEMS.register("cooked_shark_meat");
