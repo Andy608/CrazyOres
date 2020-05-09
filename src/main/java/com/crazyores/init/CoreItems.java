@@ -4,10 +4,8 @@ import com.crazyores.CrazyOres;
 import com.crazyores.init.registration.CoreRegistryObject;
 import com.crazyores.init.registration.ItemDeferredRegister;
 import com.crazyores.item.*;
-
 import net.minecraft.fluid.Fluids;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 
 public class CoreItems {
@@ -264,9 +262,9 @@ public class CoreItems {
 
 	public static final CoreRegistryObject<Item> SWIFT_BOW = ITEMS.register("swift_bow",
 			() -> new SwiftBow(ItemDeferredRegister.getBaseProps().maxDamage(2271)));
-	public static final CoreRegistryObject<Item> HELL_BOW = ITEMS.register("hell_bow");
-	public static final CoreRegistryObject<Item> DUAL_SHOT_BOW = ITEMS.register("dual_shot_bow");
-	public static final CoreRegistryObject<Item> CONFUSION_BOW = ITEMS.register("confusion_bow");
+//	public static final CoreRegistryObject<Item> HELL_BOW = ITEMS.register("hell_bow");
+//	public static final CoreRegistryObject<Item> DUAL_SHOT_BOW = ITEMS.register("dual_shot_bow");
+//	public static final CoreRegistryObject<Item> CONFUSION_BOW = ITEMS.register("confusion_bow");
 
 	//TODO: REMOVE ALL ARROWS AND ARROW HEADS!
 

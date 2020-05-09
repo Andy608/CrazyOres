@@ -1,14 +1,12 @@
 package com.crazyores.item;
 
-import java.util.function.Supplier;
-
-import javax.annotation.Nullable;
-
 import com.crazyores.init.CoreItems;
 import com.crazyores.util.CopperBucketWrapper;
-
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.CauldronBlock;
+import net.minecraft.block.IBucketPickupHandler;
+import net.minecraft.block.ILiquidContainer;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.MooshroomEntity;
@@ -23,18 +21,15 @@ import net.minecraft.item.Items;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.RayTraceContext;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
-import net.minecraftforge.fluids.capability.IFluidHandlerItem;
+
+import javax.annotation.Nullable;
+import java.util.function.Supplier;
 
 public class CopperBucket extends BucketItem {
 	private final Fluid containedBlock;

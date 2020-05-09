@@ -1,5 +1,6 @@
 package com.crazyores.item;
 
+import com.crazyores.CrazyOres;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
@@ -10,16 +11,28 @@ import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.stats.Stats;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
+import org.apache.logging.log4j.Level;
 
 public class SwiftBow extends BowItem {
 
-    public static final float ARROW_SPEED_BOOST = 2.5f;
+    public static final float ARROW_SPEED_BOOST = 1.5f;
 
     public SwiftBow(Properties builder) {
         super(builder);
+        this.addPropertyOverride(new ResourceLocation("pull"), (stack, world, entity) -> {
+            if (entity == null) {
+                return 0.0F;
+            } else {
+                return !(entity.getActiveItemStack().getItem() instanceof SwiftBow) ? 0.0F : (float)(stack.getUseDuration() - entity.getItemInUseCount()) / 10.0F;
+            }
+        });
+        this.addPropertyOverride(new ResourceLocation("pulling"), (stack, world, entity) -> {
+            return entity != null && entity.isHandActive() && entity.getActiveItemStack() == stack ? 1.0F : 0.0F;
+        });
     }
 
     @Override
@@ -48,6 +61,7 @@ public class SwiftBow extends BowItem {
                         ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : Items.ARROW);
                         AbstractArrowEntity abstractarrowentity = arrowitem.createArrow(worldIn, itemstack, playerentity);
                         abstractarrowentity = customeArrow(abstractarrowentity);
+                        CrazyOres.LOGGER.log(Level.DEBUG, Float.toString(f));
                         abstractarrowentity.shoot(playerentity, playerentity.rotationPitch, playerentity.rotationYaw, 0.0F, f * 3.0F * ARROW_SPEED_BOOST, 1.0F);
                         if (f == 1.0F) {
                             abstractarrowentity.setIsCritical(true);
@@ -91,11 +105,25 @@ public class SwiftBow extends BowItem {
         }
     }
 
+    /**
+     * Gets the velocity of the arrow entity from the bow's charge
+     */
+    public static float getArrowVelocity(int charge) {
+        float f = (float)charge / 10.0F;
+        CrazyOres.LOGGER.log(Level.DEBUG, Float.toString(f));
+        f = (f * f + f * 2.0F) / 3.0F;
+        if (f > 1.0F) {
+            f = 1.0F;
+        }
+
+        return f;
+    }
+
     @Override
     /**
      * How long it takes to use or consume an item
      */
     public int getUseDuration(ItemStack stack) {
-        return 14400;
+        return 72000;
     }
 }
