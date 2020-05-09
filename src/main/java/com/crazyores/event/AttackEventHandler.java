@@ -1,13 +1,12 @@
 package com.crazyores.event;
 
 import com.crazyores.CrazyOres;
-import com.crazyores.init.CoreItems;
 import com.crazyores.item.CoreArmor;
 import com.crazyores.item.CrazyTiers;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
@@ -38,8 +37,14 @@ public class AttackEventHandler {
         DamageSource source = event.getSource();
         LivingEntity target = event.getEntityLiving();
 
-        if (source.getTrueSource() instanceof MobEntity) {
-            MobEntity attacker = (MobEntity) source.getTrueSource();
+//        if (!target.world.isRemote) {
+//            return;
+//        }
+
+        Entity trueSource = source.getTrueSource();
+
+        if (trueSource != null /*&& !trueSource.world.isRemote*/ && trueSource instanceof MobEntity) {
+            MobEntity attacker = (MobEntity) trueSource;
             Item heldItem = attacker.getHeldItemMainhand().getItem();
             if (heldItem instanceof TieredItem) {
                 TieredItem weapon = (TieredItem) heldItem;

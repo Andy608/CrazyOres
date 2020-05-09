@@ -1,6 +1,5 @@
 package com.crazyores.item;
 
-import com.crazyores.CrazyOres;
 import com.crazyores.init.CoreItems;
 import com.crazyores.init.registration.ItemDeferredRegister;
 import net.minecraft.entity.LivingEntity;
@@ -13,8 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.core.Core;
 
 public class CoreArmor extends ArmorItem {
     public CoreArmor(IArmorMaterial materialIn, EquipmentSlotType slot) {
@@ -25,6 +22,11 @@ public class CoreArmor extends ArmorItem {
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player)
     {
         final int REAPPLY_DURATION = 2;
+
+//        if (!world.isRemote || player == null || stack == null || stack.isEmpty()) {
+//            return;
+//        }
+
         if (isWearingFullInvisiumSuit(player)) {
             if (player.getActivePotionEffect(Effects.INVISIBILITY) == null
                     || player.getActivePotionEffect(Effects.INVISIBILITY).getDuration() < REAPPLY_DURATION) {
@@ -129,18 +131,30 @@ public class CoreArmor extends ArmorItem {
     }
 
     public static boolean isWearingHelmet(LivingEntity entity, Item helmet) {
-        return entity.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem().equals(helmet);
+        if (entity != null && helmet != null) {
+            return entity.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem().equals(helmet);
+        }
+        return false;
     }
 
     public static boolean isWearingChestplate(LivingEntity entity, Item chestplate) {
-        return entity.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem().equals(chestplate);
+        if (entity != null && chestplate != null) {
+            return entity.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem().equals(chestplate);
+        }
+        return false;
     }
 
     public static boolean isWearingLeggings(LivingEntity entity, Item leggings) {
-        return entity.getItemStackFromSlot(EquipmentSlotType.LEGS).getItem().equals(leggings);
+        if (entity != null && leggings != null) {
+            return entity.getItemStackFromSlot(EquipmentSlotType.LEGS).getItem().equals(leggings);
+        }
+        return false;
     }
 
     public static boolean isWearingBoots(LivingEntity entity, Item boots) {
-        return entity.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(boots);
+        if (entity != null && boots != null) {
+            return entity.getItemStackFromSlot(EquipmentSlotType.FEET).getItem().equals(boots);
+        }
+        return false;
     }
 }

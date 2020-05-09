@@ -3,14 +3,12 @@ package com.crazyores.event;
 import com.crazyores.CrazyOres;
 import com.crazyores.item.CoreArmor;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
@@ -33,7 +31,7 @@ public class LivingEventHandler {
     @SubscribeEvent
     public static void equipmentChange(LivingEquipmentChangeEvent event) {
         LivingEntity entity = event.getEntityLiving();
-        if (!(entity instanceof PlayerEntity)) {
+        if (entity != null && !(entity instanceof PlayerEntity)) {
             if (CoreArmor.isWearingFullInvisiumSuit(entity)) {
                 entity.setInvisible(true);
             }
@@ -65,7 +63,8 @@ public class LivingEventHandler {
     @SubscribeEvent
     public static void living(LivingEvent event) {
         LivingEntity entity = event.getEntityLiving();
-        if (!(entity instanceof PlayerEntity) && CoreArmor.isWearingFullInvisiumSuit(entity)) {
+        if (entity != null && !entity.getEntityWorld().isRemote && !(entity instanceof PlayerEntity)
+                && CoreArmor.isWearingFullInvisiumSuit(entity)) {
             Random random = new Random();
             if (random.nextInt(100) == 0) {
                 Iterator<ItemStack> iter = entity.getArmorInventoryList().iterator();
