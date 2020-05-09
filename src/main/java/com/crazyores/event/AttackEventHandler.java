@@ -37,13 +37,13 @@ public class AttackEventHandler {
         DamageSource source = event.getSource();
         LivingEntity target = event.getEntityLiving();
 
-        if (!target.world.isRemote) {
-            return;
-        }
+//        if (!target.world.isRemote) {
+//            return;
+//        }
 
         Entity trueSource = source.getTrueSource();
 
-        if (trueSource != null && !trueSource.world.isRemote && trueSource instanceof MobEntity) {
+        if (trueSource != null /*&& !trueSource.world.isRemote*/ && trueSource instanceof MobEntity) {
             MobEntity attacker = (MobEntity) trueSource;
             Item heldItem = attacker.getHeldItemMainhand().getItem();
             if (heldItem instanceof TieredItem) {

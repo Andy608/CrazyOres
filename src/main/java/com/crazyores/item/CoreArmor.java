@@ -23,9 +23,9 @@ public class CoreArmor extends ArmorItem {
     {
         final int REAPPLY_DURATION = 2;
 
-        if (!world.isRemote || player == null || stack == null || stack.isEmpty()) {
-            return;
-        }
+//        if (!world.isRemote || player == null || stack == null || stack.isEmpty()) {
+//            return;
+//        }
 
         if (isWearingFullInvisiumSuit(player)) {
             if (player.getActivePotionEffect(Effects.INVISIBILITY) == null
