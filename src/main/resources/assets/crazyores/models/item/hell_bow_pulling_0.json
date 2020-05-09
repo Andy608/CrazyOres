@@ -1,0 +1,7 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "crazyores:item/hell_bow_pulling_0"
+    },
+    "overrides": []
+}

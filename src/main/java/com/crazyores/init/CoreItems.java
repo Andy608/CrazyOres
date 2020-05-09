@@ -262,7 +262,8 @@ public class CoreItems {
 
 	public static final CoreRegistryObject<Item> SWIFT_BOW = ITEMS.register("swift_bow",
 			() -> new SwiftBow(ItemDeferredRegister.getBaseProps().maxDamage(2271)));
-//	public static final CoreRegistryObject<Item> HELL_BOW = ITEMS.register("hell_bow");
+	public static final CoreRegistryObject<Item> HELL_BOW = ITEMS.register("hell_bow",
+			() -> new HellBow(ItemDeferredRegister.getBaseProps().maxDamage(322)));
 //	public static final CoreRegistryObject<Item> DUAL_SHOT_BOW = ITEMS.register("dual_shot_bow");
 //	public static final CoreRegistryObject<Item> CONFUSION_BOW = ITEMS.register("confusion_bow");
 
