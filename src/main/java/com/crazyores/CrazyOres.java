@@ -3,6 +3,7 @@ package com.crazyores;
 import com.crazyores.dispenser.EmptyBucketDispense;
 import com.crazyores.dispenser.FullBucketDispense;
 import com.crazyores.dispenser.ZectiumCoreDispense;
+import com.crazyores.init.CoreBlocks;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.dispenser.IDispenseItemBehavior;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -30,6 +31,7 @@ public class CrazyOres {
 		modEventBus.addListener(this::commonSetup);
 
 		CoreItems.ITEMS.register(modEventBus);
+		CoreBlocks.BLOCKS.register(modEventBus);
 		CoreEntityTypes.ENTITY_TYPES.register(modEventBus);
 	}
 

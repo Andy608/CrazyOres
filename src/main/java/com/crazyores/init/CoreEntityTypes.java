@@ -9,7 +9,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public final class CoreEntityTypes {
+public class CoreEntityTypes {
 	public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = new DeferredRegister<>(ForgeRegistries.ENTITIES, CrazyOres.MODID);
 	
 	public static final String ZECTIUM_CORE_NAME = "zectium_core";
