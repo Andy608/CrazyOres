@@ -147,6 +147,15 @@
 	"item.crazyores.lightning_arrow_head": "Lightning Arrowhead",
 	"item.crazyores.raw_shark_meat": "Raw Shark Meat",
 	"item.crazyores.cooked_shark_meat": "Cooked Shark Meat",
-	"item.crazyores.luminite_crystal": "Luminite Crystal",
-	"item.crazyores.lightened_brick_item": "Lightened Brick Item"
+	"item.crazyores.luminite_crystal_white": "White Luminite Crystal",
+	"item.crazyores.luminite_crystal_red": "Red Luminite Crystal",
+	"item.crazyores.luminite_crystal_orange": "Orange Luminite Crystal",
+	"item.crazyores.luminite_crystal_yellow": "Yellow Luminite Crystal",
+	"item.crazyores.luminite_crystal_green": "Green Luminite Crystal",
+	"item.crazyores.luminite_crystal_cyan": "Cyan Luminite Crystal",
+	"item.crazyores.luminite_crystal_blue": "Blue Luminite Crystal",
+	"item.crazyores.luminite_crystal_purple": "Purple Luminite Crystal",
+	"item.crazyores.luminite_crystal_pink": "Pink Luminite Crystal",
+	"item.crazyores.luminite_crystal_black": "Black Luminite Crystal",
+	"item.crazyores.lightened_brick_item": "Lightened Brick"
 }

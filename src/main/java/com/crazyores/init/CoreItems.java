@@ -283,9 +283,30 @@ public class CoreItems {
 //	public static final CoreRegistryObject<Item> FROZEN_ARROW_HEAD = ITEMS.register("frozen_arrow_head");
 //	public static final CoreRegistryObject<Item> LIGHTNING_ARROW_HEAD = ITEMS.register("lightning_arrow_head");
 
-//	public static final CoreRegistryObject<Item> RAW_SHARK_MEAT = ITEMS.register("raw_shark_meat");
-//	public static final CoreRegistryObject<Item> COOKED_SHARK_MEAT = ITEMS.register("cooked_shark_meat");
-//	
-//	public static final CoreRegistryObject<Item> LUMINITE_CRYSTAL = ITEMS.register("luminite_crystal");
-//	public static final CoreRegistryObject<Item> LIGHTENED_BRICK_ITEM = ITEMS.register("lightened_brick_item");
+	public static final CoreRegistryObject<Item> RAW_SHARK_MEAT = ITEMS.register("raw_shark_meat",
+			() -> new Item(ItemDeferredRegister.getBaseProps().food(CoreFoods.RAW_SHARK_MEAT)));
+	public static final CoreRegistryObject<Item> COOKED_SHARK_MEAT = ITEMS.register("cooked_shark_meat",
+			() -> new Item(ItemDeferredRegister.getBaseProps().food(CoreFoods.COOKED_SHARK_MEAT)));
+
+	public static final CoreRegistryObject<Item> LUMINITE_CRYSTAL_WHITE
+			= ITEMS.register("luminite_crystal_white", () -> new LuminiteCrystal(LuminiteColor.WHITE));
+	public static final CoreRegistryObject<Item> LUMINITE_CRYSTAL_RED
+			= ITEMS.register("luminite_crystal_red", () -> new LuminiteCrystal(LuminiteColor.RED));
+	public static final CoreRegistryObject<Item> LUMINITE_CRYSTAL_ORANGE
+			= ITEMS.register("luminite_crystal_orange", () -> new LuminiteCrystal(LuminiteColor.ORANGE));
+	public static final CoreRegistryObject<Item> LUMINITE_CRYSTAL_YELLOW
+			= ITEMS.register("luminite_crystal_yellow", () -> new LuminiteCrystal(LuminiteColor.YELLOW));
+	public static final CoreRegistryObject<Item> LUMINITE_CRYSTAL_GREEN
+			= ITEMS.register("luminite_crystal_green", () -> new LuminiteCrystal(LuminiteColor.GREEN));
+	public static final CoreRegistryObject<Item> LUMINITE_CRYSTAL_CYAN
+			= ITEMS.register("luminite_crystal_cyan", () -> new LuminiteCrystal(LuminiteColor.CYAN));
+	public static final CoreRegistryObject<Item> LUMINITE_CRYSTAL_BLUE
+			= ITEMS.register("luminite_crystal_blue", () -> new LuminiteCrystal(LuminiteColor.BLUE));
+	public static final CoreRegistryObject<Item> LUMINITE_CRYSTAL_PURPLE
+			= ITEMS.register("luminite_crystal_purple", () -> new LuminiteCrystal(LuminiteColor.PURPLE));
+	public static final CoreRegistryObject<Item> LUMINITE_CRYSTAL_PINK
+			= ITEMS.register("luminite_crystal_pink", () -> new LuminiteCrystal(LuminiteColor.PINK));
+	public static final CoreRegistryObject<Item> LUMINITE_CRYSTAL_BLACK
+			= ITEMS.register("luminite_crystal_black", () -> new LuminiteCrystal(LuminiteColor.BLACK));
+	public static final CoreRegistryObject<Item> LIGHTENED_BRICK_ITEM = ITEMS.register("lightened_brick_item");
 }

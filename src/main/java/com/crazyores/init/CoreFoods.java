@@ -12,6 +12,8 @@ import org.apache.commons.lang3.tuple.Pair;
 public class CoreFoods {
     public static final Food CHOCOLATE_MILK = (new Food.Builder()).hunger(4).saturation(0.1F).setAlwaysEdible().build();
     public static final Food HOT_CHOCOLATE = (new Food.Builder()).hunger(6).saturation(0.2F).setAlwaysEdible().build();
+    public static final Food RAW_SHARK_MEAT = (new Food.Builder()).hunger(3).saturation(0.1f).meat().build();
+    public static final Food COOKED_SHARK_MEAT = (new Food.Builder()).hunger(9).saturation(0.6f).meat().build();
 
     /**
      * Utility function for feeding player without shrinking stack or playing sound effect.
